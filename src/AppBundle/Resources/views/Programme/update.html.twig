@@ -12,25 +12,46 @@
         <div class="nav-wrapper right-align">
             <div class="col s12">
                 <a href="{{ path('app_accueil_index') }}" class="breadcrumb" style="font-size:15px;">Accueil</a>
-                <a href="{{ path('app_user_index') }}" class="breadcrumb" style="font-size:15px;">Utilisateurs</a>
-                <a href="{{ path('app_user_update', {'id': user.id }) }}" class="breadcrumb" style="font-size:15px;">Modifier un utilisateur</a>
+                <a href="{{ path('app_programme_index') }}" class="breadcrumb" style="font-size:15px;">Programmes</a>
+                <a href="{{ path('app_programme_update', {'id': programme.id }) }}" class="breadcrumb" style="font-size:15px;">Modifier un programme</a>
             </div>
         </div>
     </nav>
 
     <div class="container">
         <div class="row">
-            <h3 class="center-align">Modifier un utilisateur</h3>
+            <h3 class="center-align">Modifier un programme</h3>
             {{ form_start(edit_form) }}
             {{ form_widget(edit_form) }}
             <button class="mt-3 btn btn-outline-primary customBlue" type="submit">Modifier</button>
             {{ form_end(edit_form) }}
         </div>
+
+        <h3>Modifier une seance</h3>
+        <ul class="collapsible">
+            {% for seance in seances %}
+            <a class="customBlue" href="{{ path('app_programme_updateseance', {'id': seance.id }) }}">
+                <li>
+                    <div class="collapsible-header">
+                        <i class="fa fa-2x fa-thumb-tack" aria-hidden="true"></i>
+                        <div class="row">
+                            <p class="col s3">{{ seance.nom }}</p>
+                            <p class="col s3">{{ seance.description }}</p>
+                            <p class="col s3">{{ seance.semaine }}</p>
+                            <p class="col s3">{{ seance.nbheure }}</p>
+                            <p class="col s3">{{ seance.coin }} GC </p>
+                        </div>
+                    </div>
+                </li>
+            </a>
+            {% endfor %}
+        </ul>
     </div>
 
     <script>
         $(document).ready(function(){
             $('select').formSelect();
+            $('.datepicker').datepicker({});
         });
     </script>
 {% endblock %}

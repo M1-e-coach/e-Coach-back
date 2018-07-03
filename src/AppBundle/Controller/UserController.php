@@ -7,6 +7,7 @@
  */
 
 namespace AppBundle\Controller;
+
 use AppBundle\Entity\User;
 use AppBundle\Form\Type\UserType;
 use FOS\UserBundle\Controller\RegistrationController as BaseController;
@@ -42,6 +43,7 @@ class UserController extends Controller
             'users' => $users,
         );
     }
+
     /**
      * @Route("/add")
      * @Method("GET|POST")

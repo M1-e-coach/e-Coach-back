@@ -1,0 +1,57 @@
+{% extends 'dashbord.html.twig' %}
+
+{% block body %}
+    <style>
+        input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]),
+        input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]),
+        input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]),
+        input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]),
+        input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]),
+        input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]),
+        textarea.materialize-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid #5eb0e6!important;
+            -webkit-box-shadow: 0 1px 0 0 #5eb0e6!important;
+            box-shadow: 0 1px 0 0 #5eb0e6!important;
+        }
+    </style>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h4>Validation</h4>
+            <p>A bunch of text</p>
+        </div>
+        <div class="modal-footer">
+            <button type="submit" class="btn blue">Terminer</button>
+            <a href="{{ path('app_programme_addseance', {'id': id }) }}" class="btn blue">Ajouter une nouvelle séance</a>
+        </div>
+    </div>
+    <nav class="blue-grey" style="padding:0 20px!important;height:50px;line-height:50px;opacity:0.5;">
+        <div class="nav-wrapper right-align">
+            <div class="col s12">
+                <a href="{{ path('app_accueil_index') }}" class="breadcrumb" style="font-size:15px;">Accueil</a>
+                <a href="{{ path('app_programme_index') }}" class="breadcrumb" style="font-size:15px;">Programme</a>
+                <a href="{{ path('app_programme_add') }}" class="breadcrumb" style="font-size:15px;">Ajouter une seance</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <h3 class="center-align">Ajouter une seance</h3>
+            {{ form_start(form) }}
+            {{ form_widget(form) }}
+            <div class="row">
+            <a type="submit" class="col s4 mt-3 waves-effect waves-light btn blue" href="#modal">Terminer</a>
+            {{ form_end(form) }}
+                {#<a class="right col s4 mt-3 waves-effect waves-light btn blue" href="{{ path('app_programme_addseance', {'id': id }) }}">Ajouter une autre séance</a>#}
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('select').formSelect();
+            $('.timepicker').timepicker({});
+            $('.datepicker').datepicker({});
+            $('.modal').modal();
+        });
+    </script>
+{% endblock %}

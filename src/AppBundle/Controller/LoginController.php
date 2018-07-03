@@ -58,7 +58,7 @@ class LoginController extends Controller
 
         if($this->getUser() != ""){
             $userRole = $this->getUser()->getRoles()[0];
-            if($userRole == "ROLE_SUPER_ADMIN" || $userRole == "ROLE_ADMIN"){
+            if($userRole == "ROLE_SUPER_ADMIN" || $userRole == "ROLE_COACH"){
                 return $this->redirectToRoute('app_accueil_index', array(
                     'last_username' => $lastUsername,
                     'error' => $error,
