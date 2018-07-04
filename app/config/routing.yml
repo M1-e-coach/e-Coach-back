@@ -8,6 +8,10 @@ chambres:
     type: rest
     resource: ApiBundle\Controller\ChambreController
 
+users:
+    type: rest
+    resource: ApiBundle\Controller\UserController
+
 reservations:
     type: rest
     resource: ApiBundle\Controller\ReservationController

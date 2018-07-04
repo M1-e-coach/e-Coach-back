@@ -2,53 +2,43 @@
 
 {% block body %}
     <style>
-        div#tableUser_length {
+        div#tableProgramme_length {
             display: none;
         }
     </style>
-    {% if userRoles == "ROLE_SUPER_ADMIN" %}
+    {% if userRoles == "ROLE_SUPER_ADMIN" or userRoles == "ROLE_COACH" %}
         <nav class="blue-grey" style="padding:0 20px!important;height:50px;line-height:50px;opacity:0.5;">
             <div class="nav-wrapper right-align">
                 <div class="col s12">
                     <a href="{{ path('app_accueil_index') }}" class="breadcrumb" style="font-size:15px;">Accueil</a>
-                    <a href="{{ path('app_user_index') }}" class="breadcrumb" style="font-size:15px;">Utilisateurs</a>
+                    <a href="{{ path('app_jeux_index') }}" class="breadcrumb" style="font-size:15px;">Jeux</a>
                 </div>
             </div>
+        </nav>
 
-
-
-        <h3 class="center-align">Liste de tous les utilisateurs</h3>
+        <h3 class="center-align">Liste de tous les jeux</h3>
         <div class="container">
             <div class="row">
                 <div class="col s12 center-align">
-                    <a href="{{ path('app_user_add') }}" class="center-align customBlue waves-effect waves-light btn-large">
-                        <i class="material-icons left">add</i>Ajouter un utilisateur</a>
+                    <a href="{{ path('app_jeux_add') }}" class="center-align customBlue waves-effect waves-light btn-large">
+                        <i class="material-icons left">add</i>Ajouter un jeu</a>
                 </div>
-                <table class="striped mdl-data-table" id="tableUser">
+                <table class="striped mdl-data-table" id="tableProgramme">
                     <thead>
                     <tr>
-                        <th>Identifiant</th>
+                        <th>Nom</th>
                         <th>Image</th>
-                        <th>Email</th>
-                        <th>Dernière connexion</th>
-                        <th>Rôle</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
 
                     <tbody>
-                    {% for user in users %}
+                    {% for jeu in jeux %}
                         <tr>
-                            <td>{{ user.username }}</td>
-                            <td><img style="width: 75px;" src="{{ asset('/upload/image/coach/' ~ user.image) }}" alt="image"></td>
-                            <td>{{ user.email }}</td>
-                            <td>{{ user.lastLogin|date("Y-m-d H:i:s") }}</td>
-                            <td>{{ user.roles[0] }}</td>
+                            <td>{{ jeu.nom }}</td>
+                            <td><img style="width: 75px;" src="{{ asset('/upload/image/jeu/' ~ jeu.image) }}" alt="image"></td>
                             <td>
-                                <a href="{{ path('app_user_update', {'id': user.id }) }}">
-                                    <i class="fa fa-2x fa-pencil orange-text" aria-hidden="true"></i>
-                                </a>
-                                <a href="{{ path('app_user_delete', {'id': user.id }) }}">
+                                <a href="{{ path('app_jeux_delete', {'id': jeu.id }) }}">
                                     <i class="fa fa-2x fa-times red-text" aria-hidden="true"></i>
                                 </a>
                             </td>
@@ -61,7 +51,7 @@
     {% endif %}
     <script>
         $(document).ready(function() {
-            $('#tableUser').DataTable( {
+            $('#tableProgramme').DataTable( {
                 columnDefs: [
                     {
                         targets: [ 0, 1, 2 ],
