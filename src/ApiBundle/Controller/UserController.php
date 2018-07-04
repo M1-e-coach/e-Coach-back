@@ -169,4 +169,32 @@ class UserController extends Controller
         }
 
     }
+
+    /**
+     * @Rest\View()
+     * @Rest\Get("/coachs")
+     *
+     *
+     * @Doc\ApiDoc(
+     *     section="Coachs",
+     *     resource=true,
+     *     description="Get the list of all coachs."
+     * )
+     */
+    public function getCoachsAction(Request $request)
+    {
+        /*$coachs = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('AppBundle:User')
+            ->findBy(array('roles' => ''));*/
+        $entityManager = $this->getDoctrine()->getManager();
+        $query = $entityManager->createQuery(
+            'SELECT u FROM AppBundle:User u WHERE u.roles LIKE :role'
+        )->setParameter('role', '%"ROLE_COACH"%');
+
+        $coachs = $query->getResult();
+
+        /* @var $coachs Coachs[] */
+
+        return $coachs;
+    }
 }
