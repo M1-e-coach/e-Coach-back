@@ -30,6 +30,8 @@ class User extends BaseUser
         parent::__construct();
         $this->seances = new ArrayCollection();
         $this->programmes = new ArrayCollection();
+        $this->evalCoachs = new ArrayCollection();
+        $this->evalProgrammes = new ArrayCollection();
     }
 
     /**
@@ -77,5 +79,31 @@ class User extends BaseUser
     public function setPrgorammes($programmes)
     {
         $this->programmes = $programmes;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="EvalCoach", mappedBy="user")
+     */
+    private $evalCoachs;
+
+    /**
+     * @param mixed $evalCoachs
+     */
+    public function setEvalCoach($evalCoachs)
+    {
+        $this->evalCoachs = $evalCoachs;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="EvalProgramme", mappedBy="user")
+     */
+    private $evalProgrammes;
+
+    /**
+     * @param mixed $evalProgrammes
+     */
+    public function setEvalProgramme($evalProgrammes)
+    {
+        $this->evalProgrammes = $evalProgrammes;
     }
 }
