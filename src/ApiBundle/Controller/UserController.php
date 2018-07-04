@@ -209,23 +209,29 @@ class UserController extends Controller
      *     description="Get the list of all coachs."
      * )
      */
-    public function registerAction(Request $request, User $postUser)
+    public function registerAction(Request $request)
     {
         $em = $this->getDoctrine()->getManager();
         $users = $em->getRepository('AppBundle:User')->findAll();
 
         $user = new User();
-        $user->setUsername($postUser->getUsername());
-        $user->setEmail($postUser->getEmail());
-        $user->setPassword($postUser->getPassword());
+        $content = $this->get('request')->getContent();
+        if(!empty($content)){
+            $params = json_decode($content, true);
+        }
 
         foreach ($users as $checkuser) {
-            if ($checkuser->getUsername() == $postUser->getUsername() && $checkuser->getEmail() == $postUser->getEmail()) {
+            if ($checkuser->getUsername() == $params["username"] && $checkuser->getEmail() == $params["email"]) {
                 return new Response("", 409);
+            }else{
+                $user->setUsername($params["username"]);
+                $user->setEmail($params["email"]);
+                $user->setPlainPassword($params["password"]);
+                $em->persist($user);
+                $em->flush();
             }
         }
-        $em->persist($user);
-        $em->flush();
-        return new Response("User create with success", 201);
+
+        return new Response("", 201);
     }
 }
