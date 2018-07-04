@@ -16,48 +16,35 @@
             </div>
         </nav>
 
-        <h3 class="center-align">Liste de tous les programmes</h3>
+        <h3 class="center-align">Liste de tous les évaluations des coachs</h3>
         <div class="container">
             <div class="row">
-                <div class="col s12 center-align">
-                    <a href="{{ path('app_programme_add') }}" class="center-align customBlue waves-effect waves-light btn-large">
-                        <i class="material-icons left">add</i>Ajouter un programme</a>
-                    {#<a href="{{ path('app_programme_addseance') }}" class="center-align customBlue waves-effect waves-light btn-large">
-                        <i class="material-icons left">add</i>Ajouter une seance</a>#}
-                </div>
                 <table class="striped mdl-data-table" id="tableProgramme">
                     <thead>
                     <tr>
-                        <th>Nom</th>
-                        <th>Description</th>
-                        <th>Numéro semaine</th>
+                        <th>Utilisateur</th>
                         <th>Coach</th>
-                        <th>Prix en GoldCoin</th>
+                        <th>Commentaire</th>
+                        <th>Note</th>
                         <th>Actions</th>
                     </tr>
                     </thead>
 
                     <tbody>
-                    {% for programme in programmes %}
+                    {% for evalCoach in evalCoachs %}
                         <tr>
-                            <td>{{ programme.nom }}</td>
-                            <td>{{ programme.description }}</td>
-                            <td>{{ programme.semaine }}</td>
-                            <td>{{ programme.user.username }}</td>
-                            <td>{{ programme.coin }} GC</td>
+                            <td>{{ evalCoach.user.username }}</td>
+                            <td>{{ evalCoach.coachId }}</td>
+                            <td>{{ evalCoach.commentaire }}</td>
+                            <td>{{ evalCoach.note }}/5</td>
                             <td>
-                                <a href="{{ path('app_programme_addseance', {'id': programme.id }) }}">
-                                    <i class="fa fa-2x fa-plus-circle blue-text" aria-hidden="true"></i>
-                                </a>
-                                <a href="{{ path('app_programme_vue', {'id': programme.id }) }}">
-                                    <i class="fa fa-2x fa-eye green-text" aria-hidden="true"></i>
-                                </a>
-                                <a href="{{ path('app_programme_update', {'id': programme.id }) }}">
-                                    <i class="fa fa-2x fa-pencil orange-text" aria-hidden="true"></i>
-                                </a>
-                                <a href="{{ path('app_programme_delete', {'id': programme.id }) }}">
-                                    <i class="fa fa-2x fa-times red-text" aria-hidden="true"></i>
-                                </a>
+                                {% if userRoles == "ROLE_SUPER_ADMIN" %}
+                                    <a href="{{ path('app_evalcoach_delete', {'id': evalCoach.id }) }}">
+                                        <i class="fa fa-2x fa-times red-text" aria-hidden="true"></i>
+                                    </a>
+                                {% else %}
+                                    Aucunes actions disponibles
+                                {% endif %}
                             </td>
                         </tr>
                     {% endfor %}

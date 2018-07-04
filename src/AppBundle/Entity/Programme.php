@@ -159,4 +159,21 @@ class Programme
         $this->semaine = $semaine;
     }
 
+    /**
+     * @ORM\OneToMany(targetEntity="EvalProgramme", mappedBy="programme")
+     */
+    private $evalProgrammes;
+
+    /**
+     * @param mixed $evalProgrammes
+     */
+    public function setEvalProgramme($evalProgrammes)
+    {
+        $this->evalProgrammes = $evalProgrammes;
+    }
+
+    public function __construct()
+    {
+        $this->evalProgrammes = new ArrayCollection();
+    }
 }

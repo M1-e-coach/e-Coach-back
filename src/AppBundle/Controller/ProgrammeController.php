@@ -12,6 +12,7 @@ use AppBundle\Entity\Programme;
 use AppBundle\Entity\Seance;
 use AppBundle\Form\Type\ProgrammeType;
 use AppBundle\Form\Type\SeanceType;
+use function PHPSTORM_META\type;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
@@ -82,17 +83,21 @@ class ProgrammeController extends Controller
     {
         $userRoles = $this->getUser()->getRoles()[0];
 
+        $em = $this->getDoctrine()->getManager();
+        $programme = $em->getRepository('AppBundle:Programme')->find($id);
+
         $seance = new Seance();
 
         $form = $this->createForm(new SeanceType(), $seance);
         if ($form->handleRequest($request)->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $seance->setUser($this->getUser());
+            $seance->setProgramme($programme);
 
             $em->persist($seance);
             $em->flush();
 
-            return $this->redirect($this->generateUrl('app_programme_seance'));
+            return $this->redirect($this->generateUrl('app_programme_addseance', array('id' => $programme->getId())));
         }
 
         return array(
