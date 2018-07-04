@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6d314b00-f74b-4d69-91ca-3810801482ab" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/dashbord.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/dashbord.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Accueil/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Accueil/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/User/index.html.twig" />
+      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/vue.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/vue.html.twig" />
       <change beforePath="$PROJECT_DIR$/web/css/custom.css" afterPath="$PROJECT_DIR$/web/css/custom.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,8 +20,8 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Accueil/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="238" column="18" lean-forward="false" selection-start-line="238" selection-start-column="18" selection-end-line="238" selection-end-column="18" />
+            <state relative-caret-position="293">
+              <caret line="135" column="30" lean-forward="false" selection-start-line="135" selection-start-column="30" selection-end-line="135" selection-end-column="30" />
               <folding>
                 <element signature="e#820#826#0#HTML" expanded="true" />
                 <element signature="e#997#1003#0#HTML" expanded="true" />
@@ -31,19 +32,22 @@
                 <element signature="e#3062#3068#0#HTML" expanded="true" />
                 <element signature="e#3239#3245#0#HTML" expanded="true" />
                 <element signature="e#3355#3361#0#HTML" expanded="true" />
-                <element signature="e#4741#4747#0#HTML" expanded="true" />
-                <element signature="e#4919#4925#0#HTML" expanded="true" />
-                <element signature="e#5039#5045#0#HTML" expanded="true" />
-                <element signature="e#6230#6236#0#HTML" expanded="true" />
-                <element signature="e#6408#6414#0#HTML" expanded="true" />
-                <element signature="e#6528#6534#0#HTML" expanded="true" />
-                <element signature="e#7719#7725#0#HTML" expanded="true" />
-                <element signature="e#7897#7903#0#HTML" expanded="true" />
-                <element signature="e#8017#8023#0#HTML" expanded="true" />
-                <element signature="e#8738#8744#0#HTML" expanded="true" />
-                <element signature="e#9162#9168#0#HTML" expanded="true" />
-                <element signature="e#9580#9586#0#HTML" expanded="true" />
-                <element signature="e#9998#10004#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="e#4963#4969#0#HTML" expanded="true" />
+                <element signature="e#5141#5147#0#HTML" expanded="true" />
+                <element signature="e#5261#5267#0#HTML" expanded="true" />
+                <element signature="e#6452#6458#0#HTML" expanded="true" />
+                <element signature="e#6630#6636#0#HTML" expanded="true" />
+                <element signature="e#6750#6756#0#HTML" expanded="true" />
+                <element signature="e#7941#7947#0#HTML" expanded="true" />
+                <element signature="e#8119#8125#0#HTML" expanded="true" />
+                <element signature="e#8239#8245#0#HTML" expanded="true" />
+                <element signature="e#8960#8966#0#HTML" expanded="true" />
+                <element signature="e#9384#9390#0#HTML" expanded="true" />
+                <element signature="e#9802#9808#0#HTML" expanded="true" />
+                <element signature="e#10220#10226#0#HTML" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#!!top" expanded="true" />
               </folding>
@@ -52,31 +56,27 @@
         </entry>
       </file>
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/User/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="70" column="65" lean-forward="false" selection-start-line="70" selection-start-column="65" selection-end-line="70" selection-end-column="65" />
-              <folding>
-                <element signature="e#222#296#0#HTML" expanded="true" />
-                <element signature="e#467#490#0#HTML" expanded="true" />
-                <element signature="e#581#604#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="479">
               <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="vue.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/vue.html.twig">
+      <file leaf-file-name="dashbord.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/dashbord.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="65" column="3" lean-forward="false" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -85,33 +85,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dashbord.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/dashbord.html.twig">
+      <file leaf-file-name="vue.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/vue.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="25" />
+            <state relative-caret-position="1037">
+              <caret line="61" column="29" lean-forward="false" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
               <folding>
-                <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/css/custom.css">
+      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/.htaccess">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-51">
-              <caret line="313" column="64" lean-forward="false" selection-start-line="313" selection-start-column="64" selection-end-line="313" selection-end-column="64" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <marker date="1530702179025" expanded="true" signature="881:945" ph="&lt;IfModule mod_negotiation.c&gt;" />
+                <marker date="1530702179025" expanded="true" signature="947:2937" ph="&lt;IfModule mod_rewrite.c&gt;" />
+                <marker date="1530702179025" expanded="true" signature="2939:3319" ph="&lt;IfModule !mod_rewrite.c&gt;" />
+                <marker date="1530702179025" expanded="true" signature="3321:3404" ph="&lt;IfModule mod_headers.c&gt;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Jeux/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customLogin.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/customLogin.css">
+      <file leaf-file-name="add.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/add.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-3060">
+            <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/css/custom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="345" column="21" lean-forward="false" selection-start-line="345" selection-start-column="21" selection-end-line="345" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -124,6 +152,7 @@
       <find>&lt;footer</find>
       <find>+</find>
       <find>check</find>
+      <find>raw</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -132,10 +161,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Resources/views/dashbord.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/User/index.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Accueil/index.html.twig" />
         <option value="$PROJECT_DIR$/web/css/custom.css" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/vue.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/dashbord.html.twig" />
       </list>
     </option>
   </component>
@@ -179,6 +209,24 @@
             <path>
               <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
               <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -218,7 +266,63 @@
               <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Coach" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Error" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="EvalCoach" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Jeux" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Programme" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="User" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="web" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="image" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -259,12 +363,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1530619505549</updated>
-      <workItem from="1530619517132" duration="22536000" />
+      <workItem from="1530619517132" duration="38583000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22536000" />
+    <option name="totallyTimeSpent" value="38583000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -365,24 +469,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/dashbord.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/vue.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/updateseance.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -415,30 +501,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/index.html.twig">
+    <entry file="file://$PROJECT_DIR$/web/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1530702179025" expanded="true" signature="881:945" ph="&lt;IfModule mod_negotiation.c&gt;" />
+            <marker date="1530702179025" expanded="true" signature="947:2937" ph="&lt;IfModule mod_rewrite.c&gt;" />
+            <marker date="1530702179025" expanded="true" signature="2939:3319" ph="&lt;IfModule !mod_rewrite.c&gt;" />
+            <marker date="1530702179025" expanded="true" signature="3321:3404" ph="&lt;IfModule mod_headers.c&gt;" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Jeux/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/User/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="70" column="65" lean-forward="false" selection-start-line="70" selection-start-column="65" selection-end-line="70" selection-end-column="65" />
+        <state relative-caret-position="1224">
+          <caret line="72" column="65" lean-forward="false" selection-start-line="72" selection-start-column="65" selection-end-line="72" selection-end-column="65" />
           <folding>
-            <element signature="e#222#296#0#HTML" expanded="true" />
-            <element signature="e#467#490#0#HTML" expanded="true" />
-            <element signature="e#581#604#0#HTML" expanded="true" />
+            <element signature="e#222#296#0#HTML" expanded="false" />
+            <element signature="e#467#490#0#HTML" expanded="false" />
+            <element signature="e#581#604#0#HTML" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/addseance.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/add.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Accueil/index.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="238" column="18" lean-forward="false" selection-start-line="238" selection-start-column="18" selection-end-line="238" selection-end-column="18" />
+        <state relative-caret-position="293">
+          <caret line="135" column="30" lean-forward="false" selection-start-line="135" selection-start-column="30" selection-end-line="135" selection-end-column="30" />
           <folding>
             <element signature="e#820#826#0#HTML" expanded="true" />
             <element signature="e#997#1003#0#HTML" expanded="true" />
@@ -449,19 +572,22 @@
             <element signature="e#3062#3068#0#HTML" expanded="true" />
             <element signature="e#3239#3245#0#HTML" expanded="true" />
             <element signature="e#3355#3361#0#HTML" expanded="true" />
-            <element signature="e#4741#4747#0#HTML" expanded="true" />
-            <element signature="e#4919#4925#0#HTML" expanded="true" />
-            <element signature="e#5039#5045#0#HTML" expanded="true" />
-            <element signature="e#6230#6236#0#HTML" expanded="true" />
-            <element signature="e#6408#6414#0#HTML" expanded="true" />
-            <element signature="e#6528#6534#0#HTML" expanded="true" />
-            <element signature="e#7719#7725#0#HTML" expanded="true" />
-            <element signature="e#7897#7903#0#HTML" expanded="true" />
-            <element signature="e#8017#8023#0#HTML" expanded="true" />
-            <element signature="e#8738#8744#0#HTML" expanded="true" />
-            <element signature="e#9162#9168#0#HTML" expanded="true" />
-            <element signature="e#9580#9586#0#HTML" expanded="true" />
-            <element signature="e#9998#10004#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="e#4963#4969#0#HTML" expanded="true" />
+            <element signature="e#5141#5147#0#HTML" expanded="true" />
+            <element signature="e#5261#5267#0#HTML" expanded="true" />
+            <element signature="e#6452#6458#0#HTML" expanded="true" />
+            <element signature="e#6630#6636#0#HTML" expanded="true" />
+            <element signature="e#6750#6756#0#HTML" expanded="true" />
+            <element signature="e#7941#7947#0#HTML" expanded="true" />
+            <element signature="e#8119#8125#0#HTML" expanded="true" />
+            <element signature="e#8239#8245#0#HTML" expanded="true" />
+            <element signature="e#8960#8966#0#HTML" expanded="true" />
+            <element signature="e#9384#9390#0#HTML" expanded="true" />
+            <element signature="e#9802#9808#0#HTML" expanded="true" />
+            <element signature="e#10220#10226#0#HTML" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#3;n#!!top" expanded="true" />
           </folding>
@@ -470,8 +596,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="313" column="64" lean-forward="false" selection-start-line="313" selection-start-column="64" selection-end-line="313" selection-end-column="64" />
+        <state relative-caret-position="493">
+          <caret line="345" column="21" lean-forward="false" selection-start-line="345" selection-start-column="21" selection-end-line="345" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/vue.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="61" column="29" lean-forward="false" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="479">
+          <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/dashbord.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="65" column="3" lean-forward="false" selection-start-line="65" selection-start-column="3" selection-end-line="65" selection-end-column="3" />
           <folding />
         </state>
       </provider>

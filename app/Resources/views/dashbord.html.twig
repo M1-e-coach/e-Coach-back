@@ -56,23 +56,20 @@
                 Programmes
                 <i class="material-icons blue-text right">keyboard_arrow_right</i>
             </a>
+            <a class="blue-text" href="{{ path('app_jeux_index') }}">
+                <i class="fa fa-tasks blue-text" aria-hidden="true"></i>
+                Jeux
+                <i class="material-icons blue-text right">keyboard_arrow_right</i>
+            </a>
         </li>
     </ul>
-    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
-        for="demo-menu-lower-right">
-        <li class="mdl-menu__item"><a class="blue-text" href="#">Item 1</a></li>
-        <li class="mdl-menu__item"><a class="blue-text" href="#">Item 2</a></li>
-        <li class="mdl-menu__item"><a class="blue-text" href="#">Item 3</a></li>
-    </ul>
+   
     <nav class="customBlue">
         <div class="nav-wrapper">
             <a href="{{ path('app_accueil_index') }}" class="brand-logo center">Administration</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down" style="margin:15px!important;">
                 {#<li><a class="dropdown-trigger" href="#!" data-target="dropdown"><i class="material-icons">more_vert</i></a></li>#}
-                <button id="demo-menu-lower-right"
-                        class="mdl-button mdl-js-button mdl-button--icon">
-                    <i class="material-icons">more_vert</i>
-                </button>
+
             </ul>
         </div>
     </nav>

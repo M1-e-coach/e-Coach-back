@@ -341,3 +341,7 @@ nav .brand-logo {
     color: #ac1966;
     text-decoration: none;
 }
+
+.min-p p{
+    margin: 0 0 0 8px;
+}
