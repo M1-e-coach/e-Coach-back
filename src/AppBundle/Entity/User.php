@@ -112,7 +112,7 @@ class User extends BaseUser
      * @ORM\Column(type="string")
      * @Assert\File(mimeTypes={ "image/png", "image/jpeg" })
      */
-    private $image;
+    private $image = '';
 
     /**
      * @return mixed
