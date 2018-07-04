@@ -60,9 +60,9 @@ class UserController extends Controller
      *     }
      * )
      */
-    public function getUserAction($id,Request $request)
+    public function getUserAction($id, Request $request)
     {
-        $user=$this->get('doctrine.orm.entity_manager')
+        $user = $this->get('doctrine.orm.entity_manager')
             ->getRepository('AppBundle:User')
             ->find($id);
 
@@ -91,15 +91,15 @@ class UserController extends Controller
     public function postUsersAction(Request $request)
     {
         $user = new User();
-        $form = $this->createForm('AppBundle\Form\Type\UserType',$user);
+        $form = $this->createForm('AppBundle\Form\Type\UserType', $user);
         $form->submit($request->request->all());
 
-        if ($form -> isValid()){
-            $em=$this->get('doctrine.orm.entity_manager');
+        if ($form->isValid()) {
+            $em = $this->get('doctrine.orm.entity_manager');
             $em->persist($user);
             $em->flush();
             return $user;
-        }else{
+        } else {
             return $form;
         }
     }
@@ -107,7 +107,7 @@ class UserController extends Controller
     /**
      * @Rest\View(statusCode=Response::HTTP_NO_CONTENT)
      * @Rest\Delete("/users/{id}")
-     *  @Doc\ApiDoc(
+     * @Doc\ApiDoc(
      *     section="Users",
      *     resource=true,
      *     description="remove user.",
@@ -134,7 +134,7 @@ class UserController extends Controller
     /**
      * @Rest\View()
      * @Rest\Put("/users/{id}")
-     *  @Doc\ApiDoc(
+     * @Doc\ApiDoc(
      *     section="Users",
      *     resource=true,
      *     description="update user."
@@ -157,7 +157,7 @@ class UserController extends Controller
             return new JsonResponse(array('message' => 'User not found'), Response::HTTP_NOT_FOUND);
         }
 
-        $form = $this->createForm('AppBundle\Form\Type\UserType',$user);
+        $form = $this->createForm('AppBundle\Form\Type\UserType', $user);
         $form->submit($request->request->all());
         if ($form->isValid()) {
             $em = $this->get('doctrine.orm.entity_manager');
@@ -196,5 +196,36 @@ class UserController extends Controller
         /* @var $coachs Coachs[] */
 
         return $coachs;
+    }
+
+    /**
+     * @Rest\View()
+     * @Rest\Post("/register")
+     *
+     *
+     * @Doc\ApiDoc(
+     *     section="Register",
+     *     resource=true,
+     *     description="Get the list of all coachs."
+     * )
+     */
+    public function registerAction(Request $request, User $postUser)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $users = $em->getRepository('AppBundle:User')->findAll();
+
+        $user = new User();
+        $user->setUsername($postUser->getUsername());
+        $user->setEmail($postUser->getEmail());
+        $user->setPassword($postUser->getPassword());
+
+        foreach ($users as $checkuser) {
+            if ($checkuser->getUsername() == $postUser->getUsername() && $checkuser->getEmail() == $postUser->getEmail()) {
+                return new Response("", 409);
+            }
+        }
+        $em->persist($user);
+        $em->flush();
+        return new Response("User create with success", 201);
     }
 }
