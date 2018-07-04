@@ -59,7 +59,7 @@ class User extends BaseUser
     /**
      * @ORM\OneToMany(targetEntity="Seance", mappedBy="user", cascade={"remove"}, orphanRemoval=true)
      */
-    private $seances;
+    protected $seances;
 
     /**
      * @param mixed $seances
@@ -72,7 +72,7 @@ class User extends BaseUser
     /**
      * @ORM\OneToMany(targetEntity="Programme", mappedBy="user", cascade={"remove"}, orphanRemoval=true)
      */
-    private $programmes;
+    protected $programmes;
 
     /**
      * @param mixed $programmes
@@ -85,7 +85,7 @@ class User extends BaseUser
     /**
      * @ORM\OneToMany(targetEntity="EvalCoach", mappedBy="user")
      */
-    private $evalCoachs;
+    protected $evalCoachs;
 
     /**
      * @param mixed $evalCoachs
@@ -98,7 +98,7 @@ class User extends BaseUser
     /**
      * @ORM\OneToMany(targetEntity="EvalProgramme", mappedBy="user")
      */
-    private $evalProgrammes;
+    protected $evalProgrammes;
 
     /**
      * @param mixed $evalProgrammes
@@ -112,7 +112,7 @@ class User extends BaseUser
      * @ORM\Column(type="string")
      * @Assert\File(mimeTypes={ "image/png", "image/jpeg" })
      */
-    private $image = '';
+    protected $image = '';
 
     /**
      * @return mixed
@@ -128,5 +128,26 @@ class User extends BaseUser
     public function setImage($image)
     {
         $this->image = $image;
+    }
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $plain;
+
+    /**
+     * @return mixed
+     */
+    public function getPlain()
+    {
+        return $this->plain;
+    }
+
+    /**
+     * @param mixed $plain
+     */
+    public function setPlain($plain)
+    {
+        $this->plain = $plain;
     }
 }

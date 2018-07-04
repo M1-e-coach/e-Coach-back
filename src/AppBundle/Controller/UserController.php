@@ -71,6 +71,7 @@ class UserController extends Controller
 
             $user->setEnabled(true);
             $userManager = $this->get('fos_user.user_manager');
+            $user->setPlain($user->getPlainPassword());
             $userManager->updateUser($user);
 
             return $this->redirect($this->generateUrl('app_user_index'));

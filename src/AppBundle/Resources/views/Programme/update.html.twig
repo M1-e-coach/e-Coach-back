@@ -55,6 +55,8 @@
         {% if userRoles == "ROLE_SUPER_ADMIN" %}
         var iconMenuDispo = document.getElementById('dispos');
         iconMenuDispo.style = "display:none;";
+        var iconMenuProgs = document.getElementById('progs');
+        iconMenuProgs.style = "display:none;";
         {% endif %}
         $(document).ready(function(){
             $('select').formSelect();
