@@ -15,7 +15,8 @@ fos_user:
 
 parameters:
     locale: fr
-    image_directory: %kernel.root_dir%/../web/upload/image/chambre
+    image_directory: %kernel.root_dir%/../web/upload/image/jeu
+    image_coach_directory: %kernel.root_dir%/../web/upload/image/coach
 
 framework:
     #esi: ~

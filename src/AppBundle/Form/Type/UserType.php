@@ -11,6 +11,7 @@ namespace AppBundle\Form\Type;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
 
@@ -19,6 +20,7 @@ class UserType extends AbstractType {
     public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder
             ->add('username', null, array('label' => "Nom d'utilisateur", 'attr' => array('class' => 'input-field col s12')))
+            ->add('image', FileType::class, array('data_class' => null, 'label' => "Image (png, jpg)", 'required' => false, 'attr' => array('class' => 'mdl-textfield__input')))
             ->add('email', null, array('required' => false, 'label' => 'E-mail', 'attr' => array('class' => 'input-field col s12')))
             ->add('roles', CollectionType::class, array(
                     'type' => 'choice',

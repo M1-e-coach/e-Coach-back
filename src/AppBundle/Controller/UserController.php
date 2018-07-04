@@ -59,6 +59,16 @@ class UserController extends Controller
         $user = new User();
         $form = $this->createForm(new UserType(), $user);
         if ($form->handleRequest($request)->isValid()) {
+
+            $file = $user->getImage();
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+            $file->move(
+                $this->container->getParameter('image_coach_directory'),
+                $fileName
+            );
+            $user->setImage($fileName);
+
+
             $user->setEnabled(true);
             $userManager = $this->get('fos_user.user_manager');
             $userManager->updateUser($user);
