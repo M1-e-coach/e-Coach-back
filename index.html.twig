@@ -1,7 +1,7 @@
 {% extends 'dashbord.html.twig' %}
 
 {% block body %}
-    {% if userRoles == "ROLE_SUPER_ADMIN" or userRoles == "ROLE_COACH" %}
+    {% if userRoles == "ROLE_SUPER_ADMIN" %}
        <div class="container">
            <div id="card-container" class="row">
                <!-- Col: Card 1 -->
@@ -275,6 +275,9 @@
     </div>
 </div>
 
+    {% endif %}
+    {% if userRoles == "ROLE_ADMIN" %}
+        bbb
     {% endif %}
 {% endblock %}
 
