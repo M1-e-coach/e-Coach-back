@@ -14,8 +14,7 @@
                     <a href="{{ path('app_user_index') }}" class="breadcrumb" style="font-size:15px;">Utilisateurs</a>
                 </div>
             </div>
-
-
+        </nav>
 
         <h3 class="center-align">Liste de tous les utilisateurs</h3>
         <div class="container">
@@ -60,12 +59,12 @@
     <script>
         $(document).ready(function() {
             $('#tableUser').DataTable( {
-                columnDefs: [
+                 columnDefs: [
                     {
                         targets: [ 0, 1, 2 ],
                         className: 'mdl-data-table__cell--non-numeric'
                     }
-                ],
+                 ],
                 language: {
                     "sProcessing":     "Traitement en cours...",
                     "sSearch":         "Rechercher&nbsp;:",
@@ -79,7 +78,7 @@
                     "sEmptyTable":     "Aucune donn&eacute;e disponible dans le tableau",
                     "oPaginate": {
                         "sFirst":      "Premier",
-                        "sPrevious":   "Pr&eacute;c&eacute;dent",
+                          "sPrevious":   "Pr&eacute;c&eacute;dent",
                         "sNext":       "Suivant",
                         "sLast":       "Dernier"
                     },
@@ -98,4 +97,4 @@
             } );
         } );
     </script>
-{% endblock %}
+    +{% endblock %}
