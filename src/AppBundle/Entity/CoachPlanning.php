@@ -33,7 +33,17 @@ class CoachPlanning
     /**
      * @ORM\Column(type="text")
      */
+    protected $heuredebut;
+
+    /**
+     * @ORM\Column(type="text")
+     */
     protected $datefin;
+
+    /**
+     * @ORM\Column(type="text")
+     */
+    protected $heurefin;
 
     /**
      * @ORM\Column(type="boolean")
@@ -123,5 +133,58 @@ class CoachPlanning
     public function setIsActif($is_actif)
     {
         $this->is_actif = $is_actif;
+    }
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Seance", inversedBy="coachPlannings", cascade={"persist"})
+     * @ORM\JoinColumn(name="seance_id", referencedColumnName="id", nullable=true, onDelete="SET NULL")
+     */
+    private $seance;
+
+    /**
+     * @return mixed
+     */
+    public function getSeance()
+    {
+        return $this->seance;
+    }
+    /**
+     * @param mixed $seance
+     */
+    public function setSeance($seance)
+    {
+        $this->seance = $seance;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHeuredebut()
+    {
+        return $this->heuredebut;
+    }
+
+    /**
+     * @param mixed $heuredebut
+     */
+    public function setHeuredebut($heuredebut)
+    {
+        $this->heuredebut = $heuredebut;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getHeurefin()
+    {
+        return $this->heurefin;
+    }
+
+    /**
+     * @param mixed $heurefin
+     */
+    public function setHeurefin($heurefin)
+    {
+        $this->heurefin = $heurefin;
     }
 }

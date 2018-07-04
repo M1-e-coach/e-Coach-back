@@ -37,8 +37,7 @@
                             <div class="col s4">
                                 <p><b>Nom de la seance : </b>{{ seance.nom }}</p>
                                 <p><b>Description de la seance : </b>{{ seance.description }}</p>
-                                <p><b>Date de début : </b>{{ seance.datedebut|date("d/m/Y") }}</p>
-                                <p><b>Date de fin : </b>{{ seance.datefin|date("d/m/Y") }}</p>
+                                <p><b>Date : </b>{{ seance.date|date("d/m/Y") }}</p>
                                 <p><b>Nombre d'heures pour la seance : </b>{{ seance.nbheure }} heure(s)</p>
                                 <p><b>GoldCoin/heure : </b>{{ seance.coin }} GC</p>
                             </div>
@@ -52,6 +51,14 @@
     </div>
 
     <script>
+        {% if userRoles == "ROLE_COACH" %}
+        var iconMenu = document.getElementById('users');
+        iconMenu.style = "display:none;";
+        {% endif %}
+        {% if userRoles == "ROLE_SUPER_ADMIN" %}
+        var iconMenuDispo = document.getElementById('dispos');
+        iconMenuDispo.style = "display:none;";
+        {% endif %}
         $(document).ready(function(){
             $('select').formSelect();
             $('.datepicker').datepicker({});

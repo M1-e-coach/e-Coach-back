@@ -192,7 +192,7 @@ class ProgrammeController extends Controller
      * @Template("AppBundle:Programme:vue.html.twig")
      */
     public function vueAction(Programme $programme, Request $request, $id){
-        $currentRole =  $this->getUser()->getRoles()[0];
+        $userRoles =  $this->getUser()->getRoles()[0];
 
         $em = $this->getDoctrine()->getManager();
         $programme = $em->getRepository('AppBundle:Programme')->findBy(array('id' => $id));
@@ -202,7 +202,7 @@ class ProgrammeController extends Controller
         return array(
             'seances' => $seances,
             'programme' => $programme,
-            'role' => $currentRole,
+            'userRoles' => $userRoles,
         );
     }
 }

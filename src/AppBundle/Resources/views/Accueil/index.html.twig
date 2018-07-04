@@ -276,6 +276,16 @@
 </div>
 
     {% endif %}
+    <script>
+        {% if userRoles == "ROLE_COACH" %}
+        var iconMenu = document.getElementById('users');
+        iconMenu.style = "display:none;";
+        {% endif %}
+        {% if userRoles == "ROLE_SUPER_ADMIN" %}
+        var iconMenuDispo = document.getElementById('dispos');
+        iconMenuDispo.style = "display:none;";
+        {% endif %}
+    </script>
 {% endblock %}
 
 

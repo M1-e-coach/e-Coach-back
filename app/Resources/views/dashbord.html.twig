@@ -46,7 +46,7 @@
 <header>
     <ul id="slide-out" class="sidenav">
         <li>
-            <a class="blue-text" href="{{ path('app_user_index') }}">
+            <a id="users" class="blue-text" href="{{ path('app_user_index') }}">
                 <i class="material-icons blue-text">person</i>
                 Utilisateurs
                 <i class="material-icons blue-text right">keyboard_arrow_right</i>
@@ -56,13 +56,22 @@
                 Programmes
                 <i class="material-icons blue-text right">keyboard_arrow_right</i>
             </a>
+            <a class="blue-text" href="{{ path('app_jeux_index') }}">
+                <i class="fa fa-gamepad blue-text" aria-hidden="true"></i>
+                Jeux
+                <i class="material-icons blue-text right">keyboard_arrow_right</i>
+            </a>
+            <a id="dispos" class="blue-text" href="{{ path('app_coachplanning_index') }}">
+                <i class="fa fa-calendar-check-o blue-text" aria-hidden="true"></i>
+                Mes disponibilités
+                <i class="material-icons blue-text right">keyboard_arrow_right</i>
+            </a>
         </li>
     </ul>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
         for="demo-menu-lower-right">
-        <li class="mdl-menu__item"><a class="blue-text" href="#">Item 1</a></li>
-        <li class="mdl-menu__item"><a class="blue-text" href="#">Item 2</a></li>
-        <li class="mdl-menu__item"><a class="blue-text" href="#">Item 3</a></li>
+        <li class="mdl-menu__item"><a class="blue-text" href="{{ path('fos_user_security_logout') }}"><i class="fa fa-sign-out blue-text" aria-hidden="true"></i>
+                Déconnexion</a></li>
     </ul>
     <nav class="customBlue">
         <div class="nav-wrapper">
