@@ -24,9 +24,8 @@ class SeanceType extends AbstractType {
             ->add('description', null, array('required' => false, 'label' => 'Description', 'attr' => array('class' => 'input-field col s12')))
             ->add('nb_heure', null, array('required' => false, 'label' => 'Nombre d\'heure', 'attr' => array('class' => 'input-field col s12')))
             ->add('coin', null, array('required' => false, 'label' => 'GoldCoin / heure', 'attr' => array('class' => 'input-field col s12')))
-            ->add('datedebut', null, array('required' => false, 'label' => 'Date de début', 'attr' => array('class' => 'datepicker')))
+            ->add('date', null, array('required' => false, 'label' => 'Date', 'attr' => array('class' => 'datepicker')))
             ->add('datetimedebut', null, array('required' => false, 'label' => 'Heure de début', 'attr' => array('class' => 'timepicker')))
-            ->add('datefin', null, array('required' => false, 'label' => 'Date de fin', 'attr' => array('class' => 'datepicker')))
             ->add('datetimefin', null, array('required' => false, 'label' => 'Date de fin', 'attr' => array('class' => 'timepicker')))
         ;
     }

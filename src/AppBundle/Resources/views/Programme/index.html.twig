@@ -20,10 +20,11 @@
         <div class="container">
             <div class="row">
                 <div class="col s12 center-align">
+                    {% if userRoles == "ROLE_COACH" %}
                     <a href="{{ path('app_programme_add') }}" class="center-align customBlue waves-effect waves-light btn-large">
-                        <i class="material-icons left">add</i>Ajouter un programme</a>
-                    {#<a href="{{ path('app_programme_addseance') }}" class="center-align customBlue waves-effect waves-light btn-large">
-                        <i class="material-icons left">add</i>Ajouter une seance</a>#}
+                        <i class="material-icons left">add</i>Ajouter un programme
+                    </a>
+                    {% endif %}
                 </div>
                 <table class="striped mdl-data-table" id="tableProgramme">
                     <thead>
@@ -33,7 +34,9 @@
                         <th>Numéro semaine</th>
                         <th>Coach</th>
                         <th>Prix en GoldCoin</th>
+                        {% if userRoles == "ROLE_COACH" %}
                         <th>Actions</th>
+                        {% endif %}
                     </tr>
                     </thead>
 
@@ -45,6 +48,7 @@
                             <td>{{ programme.semaine }}</td>
                             <td>{{ programme.user.username }}</td>
                             <td>{{ programme.coin }} GC</td>
+                            {% if userRoles == "ROLE_COACH" %}
                             <td>
                                 <a href="{{ path('app_programme_addseance', {'id': programme.id }) }}">
                                     <i class="fa fa-2x fa-plus-circle blue-text" aria-hidden="true"></i>
@@ -59,6 +63,7 @@
                                     <i class="fa fa-2x fa-times red-text" aria-hidden="true"></i>
                                 </a>
                             </td>
+                            {% endif %}
                         </tr>
                     {% endfor %}
                     </tbody>
@@ -67,6 +72,14 @@
         </div>
     {% endif %}
     <script>
+        {% if userRoles == "ROLE_COACH" %}
+        var iconMenu = document.getElementById('users');
+        iconMenu.style = "display:none;";
+        {% endif %}
+        {% if userRoles == "ROLE_SUPER_ADMIN" %}
+        var iconMenuDispo = document.getElementById('dispos');
+        iconMenuDispo.style = "display:none;";
+        {% endif %}
         $(document).ready(function() {
             $('#tableProgramme').DataTable( {
                 columnDefs: [

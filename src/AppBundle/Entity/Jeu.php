@@ -102,4 +102,8 @@ class Jeu
     {
         $this->image = $image;
     }
+
+    public function __toString() {
+        return $this->nom;
+    }
 }

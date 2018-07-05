@@ -1,7 +1,7 @@
 {% extends 'dashbord.html.twig' %}
 
 {% block body %}
-    {% if userRoles == "ROLE_SUPER_ADMIN" or userRoles == "ROLE_COACH" %}
+    {% if userRoles == "ROLE_SUPER_ADMIN" %}
        <div class="container">
            <div id="card-container" class="row">
                <!-- Col: Card 1 -->
@@ -72,14 +72,10 @@
                 <!-- Card 2 -->
                 <div class="card">
                     <div class="card-content white-text">
-                        <div class="card__date" style="margin-right: 50px;">
-                            <p class="card__date__day" style="color: #fff;text-align: center; font-weight: bold;">23 Mai</p>
-                        </div>
-
                         <div class="card__date">
-                            <p class="card__date__day" style="color: #fff;text-align: center; font-weight: bold;">10 Juin</p>
+                            <span class="card__date__day">23</span>
+                            <span class="card__date__month">Mai</span>
                         </div>
-
                         <div class="card__meta">
                             <a href="#"><i class="small material-icons">room</i>Web Design</a>
                             <time>17th March</time>
@@ -280,16 +276,9 @@
 </div>
 
     {% endif %}
-    <script>
-        {% if userRoles == "ROLE_COACH" %}
-        var iconMenu = document.getElementById('users');
-        iconMenu.style = "display:none;";
-        {% endif %}
-        {% if userRoles == "ROLE_SUPER_ADMIN" %}
-        var iconMenuDispo = document.getElementById('dispos');
-        iconMenuDispo.style = "display:none;";
-        {% endif %}
-    </script>
+    {% if userRoles == "ROLE_ADMIN" %}
+        bbb
+    {% endif %}
 {% endblock %}
 
 

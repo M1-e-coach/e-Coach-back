@@ -170,12 +170,7 @@ class Seance
     /**
      * @ORM\Column(type="text")
      */
-    protected $datedebut;
-
-    /**
-     * @ORM\Column(type="text")
-     */
-    protected $datefin;
+    protected $date;
 
     /**
      * @ORM\Column(type="text")
@@ -190,33 +185,17 @@ class Seance
     /**
      * @return mixed
      */
-    public function getDatedebut()
+    public function getDate()
     {
-        return $this->datedebut;
+        return $this->date;
     }
 
     /**
-     * @param mixed $datedebut
+     * @param mixed $date
      */
-    public function setDatedebut($datedebut)
+    public function setDate($date)
     {
-        $this->datedebut = $datedebut;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDatefin()
-    {
-        return $this->datefin;
-    }
-
-    /**
-     * @param mixed $datefin
-     */
-    public function setDatefin($datefin)
-    {
-        $this->datefin = $datefin;
+        $this->date = $date;
     }
 
     /**
@@ -249,5 +228,27 @@ class Seance
     public function setDatetimefin($datetimefin)
     {
         $this->datetimefin = $datetimefin;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="CoachPlanning", mappedBy="user")
+     */
+    private $coachPlannings;
+
+    /**
+     * @param mixed $coachPlannings
+     */
+    public function setCoachPlanning($coachPlannings)
+    {
+        $this->coachPlannings = $coachPlannings;
+    }
+
+    public function __construct()
+    {
+        $this->coachPlannings = new ArrayCollection();
+    }
+
+    public function __toString() {
+        return $this->nom;
     }
 }
