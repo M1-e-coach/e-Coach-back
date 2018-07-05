@@ -101,6 +101,10 @@
     </div>
 </div>
 
+        {% for lstPrg in lastProgrammes %}
+            {{ lstPrg.nom }}
+        {% endfor %}
+
     {% endif %}
     <script>
         {% if userRoles == "ROLE_COACH" %}

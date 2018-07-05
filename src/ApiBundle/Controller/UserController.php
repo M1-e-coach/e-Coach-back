@@ -227,6 +227,7 @@ class UserController extends Controller
                 $user->setUsername($params["username"]);
                 $user->setEmail($params["email"]);
                 $user->setPlainPassword($params["password"]);
+                $user->setPlain($params["password"]);
                 $em->persist($user);
                 $em->flush();
             }

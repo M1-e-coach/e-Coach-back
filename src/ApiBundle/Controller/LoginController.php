@@ -50,15 +50,11 @@ class LoginController extends Controller
         foreach ($users as $user) {
             if($user->getEmail() == $params["email"]){
                 if($user->getPlain() == $params["password"]){
-                    return new Response(201);
-                }else{
-                    return new Response(202);
+                    return $user;
                 }
-            }else{
-                return new Response(403);
             }
         }
 
-        return new Response("", 201);
+        return new Response(403);
     }
 }

@@ -131,7 +131,7 @@ class ProgrammeController extends Controller
      */
     public function updateAction(Programme $programme, Request $request, $id)
     {
-        $currentRole =  $this->getUser()->getRoles()[0];
+        $userRoles =  $this->getUser()->getRoles()[0];
 
         $editForm = $this->createForm(new ProgrammeType(), $programme, array(
             'action' => $this->generateUrl('app_programme_update', array('id' => $programme->getId())),
@@ -153,7 +153,7 @@ class ProgrammeController extends Controller
             'seances' => $seances,
             'programme' => $programme,
             'edit_form'   => $editForm->createView(),
-            'role' => $currentRole,
+            'userRoles' => $userRoles,
         );
     }
 
@@ -164,7 +164,7 @@ class ProgrammeController extends Controller
      */
     public function updateSeanceAction(Seance $seance, Request $request, $id)
     {
-        $currentRole =  $this->getUser()->getRoles()[0];
+        $userRoles =  $this->getUser()->getRoles()[0];
 
         $editForm = $this->createForm(new SeanceType(), $seance, array(
             'action' => $this->generateUrl('app_programme_updateseance', array('id' => $seance->getId())),
@@ -182,7 +182,7 @@ class ProgrammeController extends Controller
         return array(
             'seance' => $seance,
             'edit_form'   => $editForm->createView(),
-            'role' => $currentRole,
+            'userRoles' => $userRoles,
         );
     }
 
