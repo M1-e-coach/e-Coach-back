@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: PC-Guillaume
- * Date: 02/07/2018
- * Time: 19:53
+ * Date: 05/07/2018
+ * Time: 11:55
  */
 
 namespace AppBundle\Entity;
@@ -14,9 +14,9 @@ use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity
- * @ORM\Table(name="programme")
+ * @ORM\Table(name="seance_solo")
  */
-class Programme
+class SeanceSolo
 {
     /**
      * @ORM\Id
@@ -36,13 +36,8 @@ class Programme
     protected $description;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    protected $coin;
-
-    /**
-     * @ORM\ManyToOne(targetEntity="User", inversedBy="programmes", cascade={"persist"})
-     * @ORM\JoinColumn(name="user_id", referencedColumnName="id", nullable=true, onDelete="SET NULL")
+     * @ORM\ManyToOne(targetEntity="User", inversedBy="seances", cascade={"persist"})
+     * @ORM\JoinColumn(name="coach_id", referencedColumnName="id", nullable=true, onDelete="SET NULL")
      */
     private $user;
 
@@ -59,19 +54,6 @@ class Programme
     public function setUser($user)
     {
         $this->user = $user;
-    }
-
-    /**
-     * @ORM\OneToMany(targetEntity="Seance", mappedBy="programme", cascade={"remove"}, orphanRemoval=true)
-     */
-    private $seance;
-
-    /**
-     * @param mixed $seance
-     */
-    public function setSeance($seance)
-    {
-        $this->seance = $seance;
     }
 
     /**
@@ -122,63 +104,12 @@ class Programme
         $this->description = $description;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCoin()
-    {
-        return $this->coin;
+    public function __toString() {
+        return $this->nom;
     }
 
     /**
-     * @param mixed $coin
-     */
-    public function setCoin($coin)
-    {
-        $this->coin = $coin;
-    }
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    private $semaine;
-
-    /**
-     * @return mixed
-     */
-    public function getSemaine()
-    {
-        return $this->semaine;
-    }
-
-    /**
-     * @param mixed $semaine
-     */
-    public function setSemaine($semaine)
-    {
-        $this->semaine = $semaine;
-    }
-
-    /**
-     * @ORM\OneToMany(targetEntity="EvalProgramme", mappedBy="programme")
-     */
-    private $evalProgrammes;
-
-    /**
-     * @param mixed $evalProgrammes
-     */
-    public function setEvalProgramme($evalProgrammes)
-    {
-        $this->evalProgrammes = $evalProgrammes;
-    }
-
-    public function __construct()
-    {
-        $this->evalProgrammes = new ArrayCollection();
-    }
-
-    /**
-     * @ORM\ManyToOne(targetEntity="Jeu", inversedBy="programmes", cascade={"persist"})
+     * @ORM\ManyToOne(targetEntity="Jeu", inversedBy="seancesolos", cascade={"persist"})
      * @ORM\JoinColumn(name="jeu_id", referencedColumnName="id", nullable=true, onDelete="SET NULL")
      */
     private $jeu;
@@ -196,9 +127,5 @@ class Programme
     public function setJeu($jeu)
     {
         $this->jeu = $jeu;
-    }
-
-    public function __toString() {
-        return $this->nom;
     }
 }

@@ -37,9 +37,6 @@
                             <div class="col s4">
                                 <p><b>Nom de la seance : </b>{{ seance.nom }}</p>
                                 <p><b>Description de la seance : </b>{{ seance.description }}</p>
-                                <p><b>Date : </b>{{ seance.date|date("d/m/Y") }}</p>
-                                <p><b>Nombre d'heures pour la seance : </b>{{ seance.nbheure }} heure(s)</p>
-                                <p><b>GoldCoin/heure : </b>{{ seance.coin }} GC</p>
                             </div>
                         {% endif %}
                     {% endfor %}
@@ -79,8 +76,6 @@
                             <span class="card-title grey-text text-darken-4">{{ seance.nom }}</span>
 
                             <p class="card-subtitle grey-text text-darken-2"><b>Description programme : </b>{{ seance.description }}</p>
-                            <p class="card-subtitle grey-text text-darken-2"><b>Nombre d'heures pour la seance : </b>{{ seance.nbheure }} heure(s)</p>
-                            <p class="card-subtitle grey-text text-darken-2"><b>GoldCoin/heure : </b>{{ seance.coin }} GC</p>
                         </div>
                     </div>
                     <!-- End of card -->
@@ -101,6 +96,8 @@
         iconMenuDispo.style = "display:none;";
         var iconMenuProgs = document.getElementById('progs');
         iconMenuProgs.style = "display:none;";
+        var iconMenuSeances = document.getElementById('seances');
+        iconMenuSeances.style = "display:none;";
         {% endif %}
         $(document).ready(function(){
             $('select').formSelect();

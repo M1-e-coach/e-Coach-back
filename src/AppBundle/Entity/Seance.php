@@ -36,18 +36,8 @@ class Seance
     protected $description;
 
     /**
-     * @ORM\Column(type="integer")
-     */
-    protected $nbHeure;
-
-    /**
-     * @ORM\Column(type="integer")
-     */
-    protected $coin;
-
-    /**
      * @ORM\ManyToOne(targetEntity="User", inversedBy="seances", cascade={"persist"})
-     * @ORM\JoinColumn(name="user_id", referencedColumnName="id", nullable=true, onDelete="SET NULL")
+     * @ORM\JoinColumn(name="coach_id", referencedColumnName="id", nullable=true, onDelete="SET NULL")
      */
     private $user;
 
@@ -133,101 +123,6 @@ class Seance
     public function setDescription($description)
     {
         $this->description = $description;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getNbHeure()
-    {
-        return $this->nbHeure;
-    }
-
-    /**
-     * @param mixed $nbHeure
-     */
-    public function setNbHeure($nbHeure)
-    {
-        $this->nbHeure = $nbHeure;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getCoin()
-    {
-        return $this->coin;
-    }
-
-    /**
-     * @param mixed $coin
-     */
-    public function setCoin($coin)
-    {
-        $this->coin = $coin;
-    }
-
-    /**
-     * @ORM\Column(type="text")
-     */
-    protected $date;
-
-    /**
-     * @ORM\Column(type="text")
-     */
-    protected $datetimedebut;
-
-    /**
-     * @ORM\Column(type="text")
-     */
-    protected $datetimefin;
-
-    /**
-     * @return mixed
-     */
-    public function getDate()
-    {
-        return $this->date;
-    }
-
-    /**
-     * @param mixed $date
-     */
-    public function setDate($date)
-    {
-        $this->date = $date;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDatetimedebut()
-    {
-        return $this->datetimedebut;
-    }
-
-    /**
-     * @param mixed $datetimedebut
-     */
-    public function setDatetimedebut($datetimedebut)
-    {
-        $this->datetimedebut = $datetimedebut;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getDatetimefin()
-    {
-        return $this->datetimefin;
-    }
-
-    /**
-     * @param mixed $datetimefin
-     */
-    public function setDatetimefin($datetimefin)
-    {
-        $this->datetimefin = $datetimefin;
     }
 
     /**

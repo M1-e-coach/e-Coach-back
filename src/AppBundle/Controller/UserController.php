@@ -9,6 +9,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\User;
+use AppBundle\Entity\Seance;
 use AppBundle\Form\Type\UserType;
 use FOS\UserBundle\Controller\RegistrationController as BaseController;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;

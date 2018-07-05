@@ -66,11 +66,6 @@ class UserController extends Controller
             ->getRepository('AppBundle:User')
             ->find($id);
 
-
-        if (empty($user)) {
-            return new JsonResponse(array('message' => 'User not found'), Response::HTTP_NOT_FOUND);
-        }
-
         return $user;
     }
 

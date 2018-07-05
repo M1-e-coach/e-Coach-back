@@ -76,9 +76,23 @@ class Jeu
         $this->programmes = $programmes;
     }
 
+    /**
+     * @ORM\OneToMany(targetEntity="SeanceSolo", mappedBy="jeu")
+     */
+    private $seancesolos;
+
+    /**
+     * @param mixed $seancesolos
+     */
+    public function setSeanceSolo($seancesolos)
+    {
+        $this->seancesolos = $seancesolos;
+    }
+
     public function __construct()
     {
         $this->programmes = new ArrayCollection();
+        $this->seancesolos = new ArrayCollection();
     }
 
     /**

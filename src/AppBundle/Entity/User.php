@@ -30,6 +30,7 @@ class User extends BaseUser
     {
         parent::__construct();
         $this->seances = new ArrayCollection();
+        $this->seancesolos = new ArrayCollection();
         $this->programmes = new ArrayCollection();
         $this->evalCoachs = new ArrayCollection();
         $this->evalProgrammes = new ArrayCollection();
@@ -67,6 +68,19 @@ class User extends BaseUser
     public function setSeances($seances)
     {
         $this->seances = $seances;
+    }
+
+    /**
+     * @ORM\OneToMany(targetEntity="SeanceSolo", mappedBy="user", cascade={"remove"}, orphanRemoval=true)
+     */
+    protected $seancesolos;
+
+    /**
+     * @param mixed $seancesolos
+     */
+    public function setSeancesolos($seancesolos)
+    {
+        $this->seancesolos = $seancesolos;
     }
 
     /**
@@ -149,5 +163,68 @@ class User extends BaseUser
     public function setPlain($plain)
     {
         $this->plain = $plain;
+    }
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $couthoraire;
+
+    /**
+     * @return mixed
+     */
+    public function getCouthoraire()
+    {
+        return $this->couthoraire;
+    }
+
+    /**
+     * @param mixed $couthoraire
+     */
+    public function setCouthoraire($couthoraire)
+    {
+        $this->couthoraire = $couthoraire;
+    }
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $description;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $note;
+
+    /**
+     * @return mixed
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * @param mixed $description
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNote()
+    {
+        return $this->note;
+    }
+
+    /**
+     * @param mixed $note
+     */
+    public function setNote($note)
+    {
+        $this->note = $note;
     }
 }

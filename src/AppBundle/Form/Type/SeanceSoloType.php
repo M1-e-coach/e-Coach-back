@@ -8,20 +8,23 @@
 
 namespace AppBundle\Form\Type;
 
+use AppBundle\Entity\Jeu;
 use AppBundle\Entity\Programme;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
-use AppBundle\Form\Type\ProgrammeType;
 
-class SeanceType extends AbstractType {
+class SeanceSoloType extends AbstractType {
     /** * {@inheritdoc} */
     public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder
             ->add('nom', null, array('label' => "Nom de la séance", 'attr' => array('class' => 'input-field col s12')))
             ->add('description', null, array('required' => false, 'label' => 'Description', 'attr' => array('class' => 'input-field col s12')))
+            ->add('jeu', EntityType::class, array(
+                'class' => Jeu::class,
+            ))
         ;
     }
 
@@ -31,7 +34,7 @@ class SeanceType extends AbstractType {
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'AppBundle\Entity\Seance',
+            'data_class' => 'AppBundle\Entity\SeanceSolo',
         ));
     }
 
@@ -40,6 +43,6 @@ class SeanceType extends AbstractType {
      */
     public function getNom()
     {
-        return 'seance';
+        return 'seancesolo';
     }
 }
