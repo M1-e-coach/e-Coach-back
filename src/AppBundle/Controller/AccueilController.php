@@ -35,8 +35,9 @@ class AccueilController extends Controller
         $user = $this->getUser();
         $userRoles = $this->getUser()->getRoles()[0];
 
-        $em = $this->getDoctrine()->getManager(); //on appelle Doctrine
-        $query = $em->createQuery( //creation de la requête
+        $em = $this->getDoctrine()->getManager();
+
+        $query = $em->createQuery(
             'SELECT p FROM AppBundle:Programme p ORDER BY p.id DESC'
         )->setMaxResults(3);
         $lastProgrammes = $query->getResult();

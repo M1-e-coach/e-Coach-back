@@ -4,41 +4,26 @@
     {% if userRoles == "ROLE_SUPER_ADMIN" or userRoles == "ROLE_COACH" %}
 
         <!-- card programme -->
-        {% for prg in programme %}
+        {% for prg in lastProgrammes %}
             <div class="container">
-                <h3 class="center-align">Programme {{ prg.nom }}</h3>
-                <div class="col s12 min-p">
-                    <p><b>Description : </b>{{ prg.description }}</p>
-                    <p><b>Numéro de semaine : </b>{{ prg.semaine }}</p>
-                    <p><b>Prix en GoldCoin du programme : </b>{{ prg.coin }} GC</p>
-                    <p><b>Coach associé : </b>{{ prg.user.username }} </p>
-                </div>
-                <h4>Seances associés à ce programme : </h4>
                 <div id="card-container" class="row">
                     <!-- Col: Card 2 -->
-                    {% for seance in seances %}
-                        {% if seance.programme.id == prg.id %}
-                            <div class="col s12 m6 l4">
-                                <!-- Card 2 -->
-                                <div class="card">
-                                    <div class="card-content white-text">
-                                        <div class="card__date" style="margin-right: 50px;">
-                                            <p class="card__date__day" style="color: #fff;text-align: center; font-weight: bold;">{{ seance.datedebut|date("d/m") }}</p>
-                                        </div>
+                    <h3 style="text-align: center;">Nos trois derniers programmes</h3>
+                    {% for prg in lastProgrammes %}
 
-                                        <div class="card__date" style="background:red;">
-                                            <p class="card__date__day" style="color: #fff;text-align: center; font-weight: bold;">{{ seance.datefin|date("d/m") }}</p>
-                                        </div>
-                                        <span class="card-title grey-text text-darken-4">{{ seance.nom }}</span>
+                        <div class="col s12 m6 l4">
+                            <!-- Card 2 -->
+                            <div class="card">
+                                <div class="card-content white-text">
+                                    <span class="card-title grey-text text-darken-4">Programme : {{ prg.nom }}</span>
 
-                                        <p class="card-subtitle grey-text text-darken-2"><b>Description programme : </b>{{ prg.description }}</p>
-                                        <p class="card-subtitle grey-text text-darken-2"><b>Nombre d'heures pour la seance : </b>{{ seance.nbheure }} heure(s)</p>
-                                        <p class="card-subtitle grey-text text-darken-2"><b>GoldCoin/heure : </b>{{ seance.coin }} GC</p>
-                                    </div>
+                                    <p class="card-subtitle grey-text text-darken-2"><b>Numéro de semaine : </b>{{ prg.semaine }}</p>
+                                    <p class="card-subtitle grey-text text-darken-2"><b>Prix en GoldCoin du programme : </b>{{ prg.coin }} GC</p>
+                                    <p class="card-subtitle grey-text text-darken-2"><b>Coach associé : </b>{{ prg.user.username }} </p>
                                 </div>
-                                <!-- End of card -->
                             </div>
-                        {% endif %}
+                        </div>
+
                     {% endfor %}
                 </div>
             </div>
@@ -100,10 +85,6 @@
 
     </div>
 </div>
-
-        {% for lstPrg in lastProgrammes %}
-            {{ lstPrg.nom }}
-        {% endfor %}
 
     {% endif %}
     <script>

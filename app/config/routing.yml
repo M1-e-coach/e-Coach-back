@@ -3,18 +3,9 @@ api:
     type:     annotation
     prefix:   /api
 
-
-chambres:
-    type: rest
-    resource: ApiBundle\Controller\ChambreController
-
 users:
     type: rest
     resource: ApiBundle\Controller\UserController
-
-reservations:
-    type: rest
-    resource: ApiBundle\Controller\ReservationController
 
 nelmioDoc:
     resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
