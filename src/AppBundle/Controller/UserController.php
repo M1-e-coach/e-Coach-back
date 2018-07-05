@@ -110,7 +110,7 @@ class UserController extends Controller
      */
     public function updateAction(User $user, Request $request, $id)
     {
-        $currentRole =  $this->getUser()->getRoles()[0];
+        $userRoles =  $this->getUser()->getRoles()[0];
         $editForm = $this->createForm(new UserType(), $user, array(
             'action' => $this->generateUrl('app_user_update', array('id' => $user->getId())),
             'method' => 'GET',
@@ -126,7 +126,7 @@ class UserController extends Controller
         return array(
             'user' => $user,
             'edit_form'   => $editForm->createView(),
-            'role' => $currentRole,
+            'userRoles' => $userRoles,
         );
     }
 }
