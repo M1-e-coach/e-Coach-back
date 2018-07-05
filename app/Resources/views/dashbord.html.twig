@@ -57,15 +57,6 @@
                 <i class="material-icons blue-text right">keyboard_arrow_right</i>
             </a>
             <a class="blue-text" href="{{ path('app_jeux_index') }}">
-
-                <i class="fa fa-tasks blue-text" aria-hidden="true"></i>
-                Jeux
-                <i class="material-icons blue-text right">keyboard_arrow_right</i>
-            </a>
-        </li>
-    </ul>
-   
-=======
                 <i class="fa fa-gamepad blue-text" aria-hidden="true"></i>
                 Jeux
                 <i class="material-icons blue-text right">keyboard_arrow_right</i>
@@ -87,13 +78,15 @@
         <li class="mdl-menu__item"><a class="blue-text" href="{{ path('fos_user_security_logout') }}"><i class="fa fa-sign-out blue-text" aria-hidden="true"></i>
                 Déconnexion</a></li>
     </ul>
->>>>>>> ae162a36f8bc7114e2c2290f075cc6118671316b
     <nav class="customBlue">
         <div class="nav-wrapper">
             <a href="{{ path('app_accueil_index') }}" class="brand-logo center">Administration</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down" style="margin:15px!important;">
                 {#<li><a class="dropdown-trigger" href="#!" data-target="dropdown"><i class="material-icons">more_vert</i></a></li>#}
-
+                <button id="demo-menu-lower-right"
+                        class="mdl-button mdl-js-button mdl-button--icon">
+                    <i class="material-icons">more_vert</i>
+                </button>
             </ul>
         </div>
     </nav>
@@ -109,7 +102,7 @@
 </header>
 
 <main>
-{% block body '' %}
+    {% block body '' %}
 </main>
 <footer class="page-footer customBlue" style="padding:10px!important;width:100%;bottom:0;">
     <div class="container">
