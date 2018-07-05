@@ -20,6 +20,13 @@
                             <p class="card-subtitle grey-text text-darken-2"><b>Prix en GoldCoin du programme : </b>{{ prg.coin }} GC</p>
                             <p class="card-subtitle grey-text text-darken-2"><b>Coach associé : </b>{{ prg.user.username }} </p>
                         </div>
+                        {% if userRoles == "ROLE_SUPER_ADMIN"%}
+                        <div style="text-align: center" class="button-profil">
+                            <a href="{{ path('app_programme_update', {'id': prg.id }) }}">
+                                <button type="button-left" class="btn" style="margin-bottom: 5px;">Modifier</button>
+                            </a>
+                        </div>
+                        {% endif %}
                     </div>
                     <!-- End of card -->
                 </div>
@@ -43,11 +50,13 @@
                                 <img src="{{ asset('/upload/image/coach/' ~ lastUser.image) }}" class="thumbnail">
                             {% endif %}
                             <h3 class="name" style="margin: 10px 0;">{{ lastUser.username }}</h3>
-                            <p class="title" style="margin-bottom: 0px;">Coach Fortnite</p>
-                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aliquam aliquid porro!</p>
+                            <p class="title" style="margin-bottom: 0px;">Nombre de GoldCoin : {{ lastUser.nbCoin }}</p>
+
+                            <p class="description">{{ lastUser.description }}</p>
                             <div style="text-align: center" class="button-profil">
-                                <button type="button-left" class="btn" style="margin-bottom: 5px;">Programme</button>
-                                <button type="button-right" class="btn" style="margin-bottom: 5px;">Séance</button>
+                                <a href="{{ path('app_user_update', {'id': lastUser.id }) }}">
+                                    <button type="button-left" class="btn" style="margin-bottom: 5px;">Modifier</button>
+                                </a>
                             </div>
                         </div>
                     </div>
