@@ -42,7 +42,16 @@ class AccueilController extends Controller
         )->setMaxResults(3);
         $lastProgrammes = $query->getResult();
 
+        $lastUsers = $em->getRepository('AppBundle:User')->findAll();
+
+        foreach ($lastUsers as $item) {
+            if($item->getRoles()[0] == "ROLE_USER"){
+                //echo $item->getUsername().' ';
+            }
+        }
+
         return array(
+            'lastUsers' => $lastUsers,
             'lastProgrammes' => $lastProgrammes,
             'user' => $user,
             'userRoles' => $userRoles,

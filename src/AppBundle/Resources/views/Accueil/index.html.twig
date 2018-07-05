@@ -32,24 +32,30 @@
 <div class="container">
     <div id="card-container" class="row">
         <h3 style="text-align: center;">Nos trois derniers profils</h3>
-        <div class="col s12 m6 l4">
-            <div class="card">
-                <div class="profile">
-                    <img src="https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w" class="thumbnail">
-
-                    <h3 class="name" style="margin: 10px 0;">Beverly Little</h3>
-                    <p class="title" style="margin-bottom: 0px;">Coach Fortnite</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aliquam aliquid porro!</p>
-                    <div style="text-align: center" class="button-profil">
-                        <button type="button-left" class="btn" style="margin-bottom: 5px;">Programme</button>
-                        <button type="button-right" class="btn" style="margin-bottom: 5px;">Séance</button>
+        {% for lastUser in lastUsers %}
+            {% if lastUser.roles[0] == "ROLE_USER" %}
+                <div class="col s12 m6 l4">
+                    <div class="card">
+                        <div class="profile">
+                            {% if lastUser.image == '' or lastUser.image == null %}
+                                <img src="{{ asset('/images/default-user.png') }}" class="thumbnail">
+                            {% else %}
+                                <img src="{{ asset('/upload/image/coach/' ~ lastUser.image) }}" class="thumbnail">
+                            {% endif %}
+                            <h3 class="name" style="margin: 10px 0;">{{ lastUser.username }}</h3>
+                            <p class="title" style="margin-bottom: 0px;">Coach Fortnite</p>
+                            <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aliquam aliquid porro!</p>
+                            <div style="text-align: center" class="button-profil">
+                                <button type="button-left" class="btn" style="margin-bottom: 5px;">Programme</button>
+                                <button type="button-right" class="btn" style="margin-bottom: 5px;">Séance</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
+            {% endif %}
+        {% endfor %}
     </div>
 </div>
-
     {% endif %}
     <script>
         {% if userRoles == "ROLE_COACH" %}
