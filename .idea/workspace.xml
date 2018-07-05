@@ -2,46 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6d314b00-f74b-4d69-91ca-3810801482ab" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.clamp/logs/apache.access.log" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.clamp/logs/apache.error.log" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/UserController.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/index.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/security.yml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Form/Type/CoachPlanningType.php" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Coach/add.html.twig" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/web/images/default-user.png" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/e-Coach-back.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/dashbord.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/dashbord.html.twig" />
-      <change beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
-      <change beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
-      <change beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/src/ApiBundle/Controller/UserController.php" afterPath="$PROJECT_DIR$/src/ApiBundle/Controller/UserController.php" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/CoachPlanningController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/CoachPlanningController.php" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ProgrammeController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ProgrammeController.php" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/CoachPlanning.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/CoachPlanning.php" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Jeu.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Jeu.php" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Seance.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Seance.php" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Form/Type/SeanceType.php" afterPath="$PROJECT_DIR$/src/AppBundle/Form/Type/SeanceType.php" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Accueil/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Accueil/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Coach/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Coach/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/EvalCoach/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/EvalCoach/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/EvalProgramme/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/EvalProgramme/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Jeux/add.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Jeux/add.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Jeux/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Jeux/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/add.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/add.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/addseance.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/addseance.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/update.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/update.html.twig" />
-      <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/updateseance.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/updateseance.html.twig" />
       <change beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/vue.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/vue.html.twig" />
+      <change beforePath="$PROJECT_DIR$/web/css/custom.css" afterPath="$PROJECT_DIR$/web/css/custom.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -52,52 +16,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Accueil/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2295">
-              <caret line="135" column="30" lean-forward="false" selection-start-line="135" selection-start-column="30" selection-end-line="135" selection-end-column="30" />
-              <folding>
-                <marker date="1530735550514" expanded="true" signature="57:95" ph="{% if userRoles == &quot;ROLE_SUPER_ADMIN&quot; ...%}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/index.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="dashbord.html.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/dashbord.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="39" column="48" lean-forward="false" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="security.yml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/security.yml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="base.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="-34">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -107,15 +29,25 @@
       <file leaf-file-name="vue.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/vue.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1020">
-              <caret line="60" column="29" lean-forward="false" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
+            <state relative-caret-position="238">
+              <caret line="58" column="12" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="58" selection-end-column="12" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Jeux/index.html.twig">
+      <file leaf-file-name="AccueilController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AccueilController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DefaultController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
               <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -124,21 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="add.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/add.html.twig">
+      <file leaf-file-name="ProgrammeController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ProgrammeController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addseance.html.twig" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/addseance.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-286">
-              <caret line="18" column="33" lean-forward="false" selection-start-line="18" selection-start-column="33" selection-end-line="18" selection-end-column="33" />
+            <state relative-caret-position="-1649">
+              <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -147,9 +69,21 @@
       <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5865">
-              <caret line="345" column="21" lean-forward="false" selection-start-line="345" selection-start-column="21" selection-end-line="345" selection-end-column="21" />
+            <state relative-caret-position="459">
+              <caret line="347" column="0" lean-forward="false" selection-start-line="347" selection-start-column="0" selection-end-line="347" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Accueil/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-102">
+              <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+              <folding>
+                <marker date="1530779162418" expanded="true" signature="57:95" ph="{% if userRoles == &quot;ROLE_SUPER_ADMIN&quot; ...%}" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -171,10 +105,11 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/User/index.html.twig" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Accueil/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/Resources/views/dashbord.html.twig" />
         <option value="$PROJECT_DIR$/web/css/custom.css" />
         <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/vue.html.twig" />
-        <option value="$PROJECT_DIR$/app/Resources/views/dashbord.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Accueil/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/AccueilController.php" />
       </list>
     </option>
   </component>
@@ -221,24 +156,6 @@
             <path>
               <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
               <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
-              <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
-              <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Resources" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="views" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
-              <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -246,6 +163,13 @@
               <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
+              <item name="e-Coach-back" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="src" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="AppBundle" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Controller" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="e-Coach-back" type="b2602c69:ProjectViewProjectNode" />
@@ -374,12 +298,12 @@
       <option name="presentableId" value="Default" />
       <updated>1530619505549</updated>
       <workItem from="1530619517132" duration="38604000" />
-      <workItem from="1530737017487" duration="730000" />
+      <workItem from="1530737017487" duration="4181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39334000" />
+    <option name="totallyTimeSpent" value="42785000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1376" height="744" extended-state="6" />
@@ -441,7 +365,7 @@
         <state relative-caret-position="2295">
           <caret line="135" column="30" lean-forward="false" selection-start-line="135" selection-start-column="30" selection-end-line="135" selection-end-column="30" />
           <folding>
-            <marker date="1530735550514" expanded="true" signature="57:95" ph="{% if userRoles == &quot;ROLE_SUPER_ADMIN&quot; ...%}" />
+            <marker date="1530779162418" expanded="true" signature="57:95" ph="{% if userRoles == &quot;ROLE_SUPER_ADMIN&quot; ...%}" />
           </folding>
         </state>
       </provider>
@@ -495,7 +419,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1530775122400" expanded="true" signature="2693:4629" ph="{...}" />
+            <marker date="1530775122400" expanded="true" signature="2745:2885" ph="{&quot;className&quot;: 'mdl-data-table__cell--non-numeric'...}" />
+            <marker date="1530775122400" expanded="true" signature="2931:4615" ph="{&quot;sProcessing&quot;: &quot;Traitement en cours...&quot;...}" />
+            <marker date="1530775122400" expanded="true" signature="3814:4052" ph="{&quot;sFirst&quot;: &quot;Premier&quot;...}" />
+            <marker date="1530775122400" expanded="true" signature="4083:4310" ph="{&quot;sSortAscending&quot;: &quot;: activer pour trier la colonne par ordre croissant&quot;...}" />
+            <marker date="1530775122400" expanded="true" signature="4342:4597" ph="{...}" />
+            <marker date="1530775122400" expanded="true" signature="4376:4575" ph="{&quot;_&quot;: &quot;%d lignes séléctionnées&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -576,6 +508,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1275">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -583,6 +516,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-3060">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -603,7 +537,15 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1530775122400" expanded="true" signature="2693:4629" ph="{...}" />
+            <marker date="1530775122400" expanded="true" signature="2745:2885" ph="{&quot;className&quot;: 'mdl-data-table__cell--non-numeric'...}" />
+            <marker date="1530775122400" expanded="true" signature="2931:4615" ph="{&quot;sProcessing&quot;: &quot;Traitement en cours...&quot;...}" />
+            <marker date="1530775122400" expanded="true" signature="3814:4052" ph="{&quot;sFirst&quot;: &quot;Premier&quot;...}" />
+            <marker date="1530775122400" expanded="true" signature="4083:4310" ph="{&quot;sSortAscending&quot;: &quot;: activer pour trier la colonne par ordre croissant&quot;...}" />
+            <marker date="1530775122400" expanded="true" signature="4342:4597" ph="{...}" />
+            <marker date="1530775122400" expanded="true" signature="4376:4575" ph="{&quot;_&quot;: &quot;%d lignes séléctionnées&quot;...}" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -611,48 +553,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1224">
           <caret line="72" column="65" lean-forward="false" selection-start-line="72" selection-start-column="65" selection-end-line="72" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Accueil/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2295">
-          <caret line="135" column="30" lean-forward="false" selection-start-line="135" selection-start-column="30" selection-end-line="135" selection-end-column="30" />
-          <folding>
-            <marker date="1530735550514" expanded="true" signature="57:95" ph="{% if userRoles == &quot;ROLE_SUPER_ADMIN&quot; ...%}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/custom.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5865">
-          <caret line="345" column="21" lean-forward="false" selection-start-line="345" selection-start-column="21" selection-end-line="345" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/vue.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="60" column="29" lean-forward="false" selection-start-line="60" selection-start-column="29" selection-end-line="60" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -682,9 +582,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/dashbord.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="39" column="48" lean-forward="false" selection-start-line="39" selection-start-column="48" selection-end-line="39" selection-end-column="48" />
+        <state relative-caret-position="329">
+          <caret line="47" column="12" lean-forward="false" selection-start-line="47" selection-start-column="12" selection-end-line="47" selection-end-column="12" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="347" column="0" lean-forward="false" selection-start-line="347" selection-start-column="0" selection-end-line="347" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="50" lean-forward="false" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-34">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Programme/vue.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="58" column="12" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="58" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/ProgrammeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1649">
+          <caret line="44" column="23" lean-forward="false" selection-start-line="44" selection-start-column="13" selection-end-line="44" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/AccueilController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="29" column="18" lean-forward="true" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Accueil/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="6" column="34" lean-forward="true" selection-start-line="6" selection-start-column="34" selection-end-line="6" selection-end-column="34" />
+          <folding>
+            <marker date="1530779162418" expanded="true" signature="57:95" ph="{% if userRoles == &quot;ROLE_SUPER_ADMIN&quot; ...%}" />
+          </folding>
         </state>
       </provider>
     </entry>

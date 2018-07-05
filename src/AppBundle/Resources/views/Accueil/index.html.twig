@@ -2,208 +2,47 @@
 
 {% block body %}
     {% if userRoles == "ROLE_SUPER_ADMIN" or userRoles == "ROLE_COACH" %}
-       <div class="container">
-           <div id="card-container" class="row">
-               <!-- Col: Card 1 -->
-               <div class="col s12 m6 l4">
-                   <!-- Card 1 -->
-                   <div class="card">
-                       <div class="card-content white-text">
-                           <span class="card-title grey-text text-darken-4">Cours de précision</span>
-                           <p class="card-subtitle grey-text text-darken-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...lacus eleifend lacinia... go!</p>
-                           <span class="text-darken-2 card-info"><i class="small material-icons">label</i>&nbsp;CSS, PUBG, Fortnite</span>
-                       </div>
-                       <div class="card-action">
-                           <a href="#"><i class="material-icons">&nbsp;room</i>Séance</a>
-                           <a href="#" class="card-action-right"><i class="material-icons">&nbsp;language</i>Programme</a>
-                       </div>
-                   </div>
-                   <!-- End of card -->
-               </div>
-               <!-- End of col -->
 
-               <!-- Col: Card 1 -->
-               <div class="col s12 m6 l4">
-                   <!-- Card 1 -->
-                   <div class="card">
-                       <div class="card-content white-text">
-                           <span class="card-title grey-text text-darken-4">Cours de précision</span>
-                           <p class="card-subtitle grey-text text-darken-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...lacus eleifend lacinia... go!</p>
-                           <span class="text-darken-2 card-info"><i class="small material-icons">label</i>&nbsp;CSS, PUBG, Fortnite</span>
-                       </div>
-                       <div class="card-action">
-                           <a href="#"><i class="material-icons">&nbsp;room</i>Séance</a>
-                           <a href="#" class="card-action-right"><i class="material-icons">&nbsp;language</i>Programme</a>
-                       </div>
-                   </div>
-                   <!-- End of card -->
-               </div>
-               <!-- End of col -->
-
-               <!-- Col: Card 1 -->
-               <div class="col s12 m6 l4">
-                   <!-- Card 1 -->
-                   <div class="card">
-                       <div class="card-content white-text">
-                           <span class="card-title grey-text text-darken-4">Cours de précision</span>
-                           <p class="card-subtitle grey-text text-darken-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...lacus eleifend lacinia... go!</p>
-                           <span class="text-darken-2 card-info"><i class="small material-icons">label</i>&nbsp;CSS, PUBG, Fortnite</span>
-                       </div>
-                       <div class="card-action">
-                           <a href="#"><i class="material-icons">&nbsp;room</i>Séance</a>
-                           <a href="#" class="card-action-right"><i class="material-icons">&nbsp;language</i>Programme</a>
-                       </div>
-                   </div>
-                   <!-- End of card -->
-               </div>
-               <!-- End of col -->
-
-           </div>
-       </div>
-
-
-        <!--  Card2  -->
-
-
-        <div class="container">
-        <div id="card-container" class="row">
-            <!-- Col: Card 2 -->
-            <div class="col s12 m6 l4">
-                <!-- Card 2 -->
-                <div class="card">
-                    <div class="card-content white-text">
-                        <div class="card__date" style="margin-right: 50px;">
-                            <p class="card__date__day" style="color: #fff;text-align: center; font-weight: bold;">23 Mai</p>
-                        </div>
-
-                        <div class="card__date">
-                            <p class="card__date__day" style="color: #fff;text-align: center; font-weight: bold;">10 Juin</p>
-                        </div>
-
-                        <div class="card__meta">
-                            <a href="#"><i class="small material-icons">room</i>Web Design</a>
-                            <time>17th March</time>
-                        </div>
-                        <span class="card-title grey-text text-darken-4">Savoy swing up</span>
-
-                        <p class="card-subtitle grey-text text-darken-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...lacus eleifend lacinia... go!</p>
-                        <span class="text-darken-2 card-info"><i class="small material-icons">label</i>&nbsp;lindy hop, balboa, charleston</span>
-                    </div>
-                    <div class="card-action">
-                        <a href="#"><i class="material-icons">&nbsp;language</i>VISIT WEB</a>
-                        <a href="#" class="card-action-right"><i class="material-icons">&nbsp;room</i>FIND</a>
-                    </div>
+        <!-- card programme -->
+        {% for prg in programme %}
+            <div class="container">
+                <h3 class="center-align">Programme {{ prg.nom }}</h3>
+                <div class="col s12 min-p">
+                    <p><b>Description : </b>{{ prg.description }}</p>
+                    <p><b>Numéro de semaine : </b>{{ prg.semaine }}</p>
+                    <p><b>Prix en GoldCoin du programme : </b>{{ prg.coin }} GC</p>
+                    <p><b>Coach associé : </b>{{ prg.user.username }} </p>
                 </div>
-                <!-- End of card -->
-            </div>
+                <h4>Seances associés à ce programme : </h4>
+                <div id="card-container" class="row">
+                    <!-- Col: Card 2 -->
+                    {% for seance in seances %}
+                        {% if seance.programme.id == prg.id %}
+                            <div class="col s12 m6 l4">
+                                <!-- Card 2 -->
+                                <div class="card">
+                                    <div class="card-content white-text">
+                                        <div class="card__date" style="margin-right: 50px;">
+                                            <p class="card__date__day" style="color: #fff;text-align: center; font-weight: bold;">{{ seance.datedebut|date("d/m") }}</p>
+                                        </div>
 
-            <!-- Col: Card 2 -->
-            <div class="col s12 m6 l4">
-                <!-- Card 2 -->
-                <div class="card">
-                    <div class="card-content white-text">
-                        <div class="card__date">
-                            <span class="card__date__day">23</span>
-                            <span class="card__date__month">Mai</span>
-                        </div>
-                        <div class="card__meta">
-                            <a href="#"><i class="small material-icons">room</i>Web Design</a>
-                            <time>17th March</time>
-                        </div>
-                        <span class="card-title grey-text text-darken-4">Savoy swing up</span>
+                                        <div class="card__date" style="background:red;">
+                                            <p class="card__date__day" style="color: #fff;text-align: center; font-weight: bold;">{{ seance.datefin|date("d/m") }}</p>
+                                        </div>
+                                        <span class="card-title grey-text text-darken-4">{{ seance.nom }}</span>
 
-                        <p class="card-subtitle grey-text text-darken-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...lacus eleifend lacinia... go!</p>
-                        <span class="text-darken-2 card-info"><i class="small material-icons">label</i>&nbsp;lindy hop, balboa, charleston</span>
-                    </div>
-                    <div class="card-action">
-                        <a href="#"><i class="material-icons">&nbsp;language</i>VISIT WEB</a>
-                        <a href="#" class="card-action-right"><i class="material-icons">&nbsp;room</i>FIND</a>
-                    </div>
+                                        <p class="card-subtitle grey-text text-darken-2"><b>Description programme : </b>{{ prg.description }}</p>
+                                        <p class="card-subtitle grey-text text-darken-2"><b>Nombre d'heures pour la seance : </b>{{ seance.nbheure }} heure(s)</p>
+                                        <p class="card-subtitle grey-text text-darken-2"><b>GoldCoin/heure : </b>{{ seance.coin }} GC</p>
+                                    </div>
+                                </div>
+                                <!-- End of card -->
+                            </div>
+                        {% endif %}
+                    {% endfor %}
                 </div>
-                <!-- End of card -->
             </div>
-
-            <!-- Col: Card 2 -->
-            <div class="col s12 m6 l4">
-                <!-- Card 2 -->
-                <div class="card">
-                    <div class="card-content white-text">
-                        <div class="card__date">
-                            <span class="card__date__day">23</span>
-                            <span class="card__date__month">Mai</span>
-                        </div>
-                        <div class="card__meta">
-                            <a href="#"><i class="small material-icons">room</i>Web Design</a>
-                            <time>17th March</time>
-                        </div>
-                        <span class="card-title grey-text text-darken-4">Savoy swing up</span>
-
-                        <p class="card-subtitle grey-text text-darken-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris sagittis pellentesque lacus eleifend lacinia...lacus eleifend lacinia... go!</p>
-                        <span class="text-darken-2 card-info"><i class="small material-icons">label</i>&nbsp;lindy hop, balboa, charleston</span>
-                    </div>
-                    <div class="card-action">
-                        <a href="#"><i class="material-icons">&nbsp;language</i>VISIT WEB</a>
-                        <a href="#" class="card-action-right"><i class="material-icons">&nbsp;room</i>FIND</a>
-                    </div>
-                </div>
-                <!-- End of card -->
-            </div>
-        </div>
-        </div>
-
-        <!--  Elément secondaire  -->
-
-        <div class="container">
-        <div id="card-container" class="row">
-            <div class="col s12 m6 l6">
-            <ul class="collection">
-                <li class="collection-item avatar">
-                    <img src="images/yuna.jpg" alt="" class="circle">
-                    <span class="title">Coach</span>
-                    <p>Description <br>
-                        Description
-                    </p>
-                    <a href="#!" class="secondary-content"><i class="medium material-icons">&nbsp;arrow_forward</i></a>
-                </li>
-                <li class="collection-item avatar">
-                    <i class="material-icons circle green">insert_chart</i>
-                    <span class="title">Coach</span>
-                    <p>Description <br>
-                        Description
-                    </p>
-                    <a href="#!" class="secondary-content"><i class="medium material-icons">&nbsp;arrow_forward</i></a>
-                </li>
-                <li class="collection-item avatar">
-                    <img src="images/yuna.jpg" alt="" class="circle">
-                    <span class="title">Coach</span>
-                    <p>Description <br>
-                        Description
-                    </p>
-                    <a href="#!" class="secondary-content"><i class="medium material-icons">&nbsp;arrow_forward</i></a>
-                </li>
-                <li class="collection-item avatar">
-                    <img src="images/yuna.jpg" alt="" class="circle">
-                    <span class="title">Coach</span>
-                    <p>Description <br>
-                        Description
-                    </p>
-                    <a href="#!" class="secondary-content"><i class="medium material-icons">&nbsp;arrow_forward</i></a>
-                </li>
-            </ul>
-            </div>
-        </div>
-        </div>
-
-        <!-- Pagination -->
-        <ul class="pagination">
-            <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
-            <li class="active"><a href="#!">1</a></li>
-            <li class="waves-effect"><a href="#!">2</a></li>
-            <li class="waves-effect"><a href="#!">3</a></li>
-            <li class="waves-effect"><a href="#!">4</a></li>
-            <li class="waves-effect"><a href="#!">5</a></li>
-            <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
-        </ul>
+        {% endfor %}
 
         <!-- profile card -->
 
@@ -251,26 +90,9 @@
                     <h3 class="name">Beverly Little</h3>
                     <p class="title">Coach Fortnite</p>
                     <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aliquam aliquid porro!</p>
-                    <button type="button" class="btn">Hire Me</button>
-                </div>
-
-                <div class="social-icons">
-                    <div class="icon">
-                        <a href="/"><i class="fab fa-dribbble"></i></a>
-                        <h4>12.8k</h4>
-                        <p>Followers</p>
-                    </div>
-
-                    <div class="icon">
-                        <a href="#"><i class="fab fa-behance"></i></a>
-                        <h4>12.8k</h4>
-                        <p>Followers</p>
-                    </div>
-
-                    <div class="icon">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <h4>12.8k</h4>
-                        <p>Followers</p>
+                    <div class="button-profile" style="text-align: center">
+                        <button type="button-left" class="btn">Programme</button>
+                        <button type="button-right" class="btn">Séance</button>
                     </div>
                 </div>
             </div>
