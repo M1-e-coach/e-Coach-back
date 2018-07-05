@@ -52,11 +52,9 @@ class LoginController extends Controller
                 if($user->getPlain() == $params["password"]){
                     return $user;
                 }
-            }else{
-                return new Response(403);
             }
         }
 
-        return new Response("", 202);
+        return new Response(403);
     }
 }
