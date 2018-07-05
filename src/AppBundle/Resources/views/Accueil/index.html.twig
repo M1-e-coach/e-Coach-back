@@ -4,6 +4,7 @@
     {% if userRoles == "ROLE_SUPER_ADMIN" or userRoles == "ROLE_COACH" %}
 
         <!-- card programme -->
+<<<<<<< HEAD
         {% for prg in lastProgrammes %}
             <div class="container">
                 <div id="card-container" class="row">
@@ -30,59 +31,52 @@
         {% endfor %}
 
         <!-- profile card -->
+=======
+>>>>>>> e8e1bc6c2dff189ca5831a41cef4377c2457b319
+
+<div class="container">
+        <div id="card-container" class="row">
+            <!-- Col: Card 2 -->
+            <h3 style="text-align: center;">Nos trois derniers programmes</h3>
+            {% for prg in lastProgrammes %}
+
+                <div class="col s12 m6 l4">
+                    <!-- Card 2 -->
+                    <div class="card">
+                        <div class="card-content white-text">
+                            <span class="card-title grey-text text-darken-4">Programme : {{ prg.nom }}</span>
+
+                            <p class="card-subtitle grey-text text-darken-2"><b>Numéro de semaine : </b>{{ prg.semaine }}</p>
+                            <p class="card-subtitle grey-text text-darken-2"><b>Prix en GoldCoin du programme : </b>{{ prg.coin }} GC</p>
+                            <p class="card-subtitle grey-text text-darken-2"><b>Coach associé : </b>{{ prg.user.username }} </p>
+                        </div>
+                    </div>
+                    <!-- End of card -->
+                </div>
+
+            {% endfor %}
+        </div>
+</div>
+        <!-- profile card -->
 
 <div class="container">
     <div id="card-container" class="row">
+        <h3 style="text-align: center;">Nos trois derniers profils</h3>
         <div class="col s12 m6 l4">
             <div class="card">
                 <div class="profile">
                     <img src="https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w" class="thumbnail">
 
-                    <h3 class="name">Beverly Little</h3>
-                    <p class="title">Coach Fortnite</p>
+                    <h3 class="name" style="margin: 10px 0;">Beverly Little</h3>
+                    <p class="title" style="margin-bottom: 0px;">Coach Fortnite</p>
                     <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aliquam aliquid porro!</p>
-                    <div style="text-align: center">
-                        <button type="button-left" class="btn">Programme</button>
-                        <button type="button-right" class="btn">Séance</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col s12 m6 l4">
-            <div class="card">
-                <div class="profile">
-                    <img src="https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w" class="thumbnail">
-
-                    <h3 class="name">Beverly Little</h3>
-                    <p class="title">Coach Fortnite</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aliquam aliquid porro!</p>
-                    <div style="text-align: center">
-                        <button type="button-left" class="btn">Programme</button>
-                        <button type="button-right" class="btn">Séance</button>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="col s12 m6 l4">
-            <div class="card">
-                <div class="profile">
-                    <img src="https://images.unsplash.com/photo-1484186139897-d5fc6b908812?ixlib=rb-0.3.5&s=9358d797b2e1370884aa51b0ab94f706&auto=format&fit=crop&w=200&q=80%20500w" class="thumbnail">
-
-                    <h3 class="name">Beverly Little</h3>
-                    <p class="title">Coach Fortnite</p>
-                    <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque aliquam aliquid porro!</p>
-                    <div class="button-profile" style="text-align: center">
-                        <button type="button-left" class="btn">Programme</button>
-                        <button type="button-right" class="btn">Séance</button>
+                    <div style="text-align: center" class="button-profil">
+                        <button type="button-left" class="btn" style="margin-bottom: 5px;">Programme</button>
+                        <button type="button-right" class="btn" style="margin-bottom: 5px;">Séance</button>
                     </div>
                 </div>
             </div>
         </div>
-
     </div>
 </div>
 
