@@ -25,6 +25,9 @@ class UserType extends AbstractType {
             ->add('email', null, array('required' => false, 'label' => 'E-mail', 'attr' => array('class' => 'input-field col s12')))
             ->add('couthoraire', null, array('required' => false, 'label' => 'Coût horraire en GoldCoin (GC)', 'attr' => array('class' => 'input-field col s12')))
             ->add('description', null, array('required' => false, 'label' => 'Description', 'attr' => array('class' => 'input-field col s12')))
+            ->add('jeu', EntityType::class, array(
+                'class' => Jeu::class,
+            ))
             ->add('roles', CollectionType::class, array(
                     'type' => 'choice',
                     'label' => false,

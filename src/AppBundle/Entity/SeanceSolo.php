@@ -107,25 +107,4 @@ class SeanceSolo
     public function __toString() {
         return $this->nom;
     }
-
-    /**
-     * @ORM\ManyToOne(targetEntity="Jeu", inversedBy="seancesolos", cascade={"persist"})
-     * @ORM\JoinColumn(name="jeu_id", referencedColumnName="id", nullable=true, onDelete="SET NULL")
-     */
-    private $jeu;
-
-    /**
-     * @return mixed
-     */
-    public function getJeu()
-    {
-        return $this->jeu;
-    }
-    /**
-     * @param mixed $jeu
-     */
-    public function setJeu($jeu)
-    {
-        $this->jeu = $jeu;
-    }
 }

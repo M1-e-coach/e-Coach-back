@@ -71,4 +71,38 @@ class CoachController extends Controller
             'coachSeanceSolos' => $coachsSeanceSolos
         );
     }
+
+    /**
+     * @Rest\View()
+     * @Rest\Get("/coachs/jeu/{nom}")
+     *
+     * @Doc\ApiDoc(
+     *     section="Users",
+     *     resource=true,
+     *     description="Get one user.",
+     *     requirements={
+     *         {
+     *             "name"="nom",
+     *             "dataType"="string",
+     *             "requirements"="\d+",
+     *             "description"="The article unique identifier."
+     *         }
+     *     }
+     * )
+     */
+    public function getGameAction($nom, Request $request)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $query = $entityManager->createQuery(
+            'SELECT u FROM AppBundle:User u, AppBundle:Jeu j WHERE u.jeu = j.id AND j.nom = :nom AND  u.roles LIKE :role'
+        )
+            ->setParameter('role', '%"ROLE_COACH"%')
+            ->setParameter('nom', $nom)
+        ;
+        $coachsJeu = $query->getResult();
+
+        return array(
+            'CoachsByJeu' => $coachsJeu
+        );
+    }
 }

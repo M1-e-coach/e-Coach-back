@@ -64,35 +64,21 @@ class Jeu
     }
 
     /**
-     * @ORM\OneToMany(targetEntity="Programme", mappedBy="jeu")
+     * @ORM\OneToMany(targetEntity="User", mappedBy="jeu")
      */
-    private $programmes;
+    private $users;
 
     /**
-     * @param mixed $programmes
+     * @param mixed $users
      */
-    public function setProgramme($programmes)
+    public function setUser($users)
     {
-        $this->programmes = $programmes;
-    }
-
-    /**
-     * @ORM\OneToMany(targetEntity="SeanceSolo", mappedBy="jeu")
-     */
-    private $seancesolos;
-
-    /**
-     * @param mixed $seancesolos
-     */
-    public function setSeanceSolo($seancesolos)
-    {
-        $this->seancesolos = $seancesolos;
+        $this->users = $users;
     }
 
     public function __construct()
     {
-        $this->programmes = new ArrayCollection();
-        $this->seancesolos = new ArrayCollection();
+        $this->users = new ArrayCollection();
     }
 
     /**

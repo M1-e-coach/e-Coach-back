@@ -177,26 +177,6 @@ class Programme
         $this->evalProgrammes = new ArrayCollection();
     }
 
-    /**
-     * @ORM\ManyToOne(targetEntity="Jeu", inversedBy="programmes", cascade={"persist"})
-     * @ORM\JoinColumn(name="jeu_id", referencedColumnName="id", nullable=true, onDelete="SET NULL")
-     */
-    private $jeu;
-
-    /**
-     * @return mixed
-     */
-    public function getJeu()
-    {
-        return $this->jeu;
-    }
-    /**
-     * @param mixed $jeu
-     */
-    public function setJeu($jeu)
-    {
-        $this->jeu = $jeu;
-    }
 
     public function __toString() {
         return $this->nom;
