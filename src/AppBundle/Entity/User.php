@@ -248,4 +248,92 @@ class User extends BaseUser
     {
         $this->jeu = $jeu;
     }
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $age;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $pays;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $langue;
+
+    /**
+     * @ORM\Column(type="string")
+     */
+    protected $divers;
+
+    /**
+     * @return mixed
+     */
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+    /**
+     * @param mixed $age
+     */
+    public function setAge($age)
+    {
+        $this->age = $age;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDivers()
+    {
+        return $this->divers;
+    }
+
+    /**
+     * @param mixed $divers
+     */
+    public function setDivers($divers)
+    {
+        $this->divers = $divers;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPays()
+    {
+        return $this->pays;
+    }
+
+    /**
+     * @param mixed $pays
+     */
+    public function setPays($pays)
+    {
+        $this->pays = $pays;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getLangue()
+    {
+        return $this->langue;
+    }
+
+    /**
+     * @param mixed $langue
+     */
+    public function setLangue($langue)
+    {
+        $this->langue = $langue;
+    }
+
+    public function __toString() {
+        return $this->username;
+    }
 }

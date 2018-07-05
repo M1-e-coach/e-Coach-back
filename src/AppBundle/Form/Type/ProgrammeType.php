@@ -24,9 +24,6 @@ class ProgrammeType extends AbstractType {
             ->add('description', null, array('required' => false, 'label' => 'Description', 'attr' => array('class' => 'input-field col s12')))
             ->add('coin', null, array('required' => false, 'label' => 'Nombre de Gold Coin', 'attr' => array('class' => 'input-field col s12')))
             ->add('semaine', null, array('required' => false, 'label' => 'Numéro de semaine', 'attr' => array('class' => 'input-field col s12')))
-            ->add('jeu', EntityType::class, array(
-                'class' => Jeu::class,
-            ))
         ;
     }
 

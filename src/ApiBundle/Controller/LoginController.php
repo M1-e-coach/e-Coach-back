@@ -33,11 +33,6 @@ class LoginController extends Controller
      */
     public function loginAction(Request $request)
     {
-        /*$users = $this->get('doctrine.orm.entity_manager')
-            ->getRepository('AppBundle:User')
-            ->findAll();*/
-        /* @var $users Users[] */
-
         $em = $this->getDoctrine()->getManager();
         $users = $em->getRepository('AppBundle:User')->findAll();
 

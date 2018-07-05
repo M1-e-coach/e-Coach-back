@@ -8,7 +8,9 @@
 
 namespace ApiBundle\Controller;
 
+use AppBundle\Entity\Stat;
 use AppBundle\Entity\User;
+use function PHPSTORM_META\type;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -178,9 +180,6 @@ class UserController extends Controller
      */
     public function getCoachsAction(Request $request)
     {
-        /*$coachs = $this->get('doctrine.orm.entity_manager')
-            ->getRepository('AppBundle:User')
-            ->findBy(array('roles' => ''));*/
         $entityManager = $this->getDoctrine()->getManager();
         $query = $entityManager->createQuery(
             'SELECT u FROM AppBundle:User u WHERE u.roles LIKE :role'
@@ -227,6 +226,70 @@ class UserController extends Controller
                 $em->flush();
             }
         }
+
+        return new Response("", 201);
+    }
+
+    /**
+     * @Rest\View()
+     * @Rest\Put("/users/infos/{id}")
+     * @Doc\ApiDoc(
+     *     section="Users",
+     *     resource=true,
+     *     description="update user."
+     *
+     * )
+     */
+    public function putUsersInfoAction($id, Request $request)
+    {
+        $content = $this->get('request')->getContent();
+        if(!empty($content)){
+            $params = json_decode($content, true);
+        }
+        $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository('AppBundle:User')->find($id);
+
+        $user->setAge($params["age"]);
+        $user->setPays($params["pays"]);
+        $user->setLangue($params["langue"]);
+        $user->setDivers($params["divers"]);
+
+        $em->persist($user);
+        $em->flush();
+
+        return $user;
+    }
+
+    /**
+     * @Rest\View()
+     * @Rest\Post("/users/stats/{id}")
+     *
+     *
+     * @Doc\ApiDoc(
+     *     section="Register",
+     *     resource=true,
+     *     description="Get the list of all coachs."
+     * )
+     */
+    public function postUserStatAction($id, Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $stat = new Stat();
+        $content = $this->get('request')->getContent();
+        if(!empty($content)){
+            $params = json_decode($content, true);
+        }
+
+        $stat->setUserId($params["id"]);
+        $stat->setPrecision($params["precision"]);
+        $stat->setCommunication($params["communication"]);
+        $stat->setReflexe($params["reflexe"]);
+        $stat->setMindgame($params["mindgame"]);
+        $stat->setDeplacement($params["deplacement"]);
+
+        $em->persist($stat);
+        $em->flush();
 
         return new Response("", 201);
     }
