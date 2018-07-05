@@ -52,6 +52,8 @@ class LoginController extends Controller
                 if($user->getPlain() == $params["password"]){
                     return $user;
                 }
+            }else{
+                return new Response(403);
             }
         }
 
