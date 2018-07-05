@@ -29,7 +29,6 @@
                 <table class="striped mdl-data-table" id="tableProgramme">
                     <thead>
                     <tr>
-                        <th>Seance</th>
                         <th>Date de début</th>
                         <th>Date de fin</th>
                         {% if userRoles == "ROLE_COACH" %}
@@ -41,17 +40,16 @@
                     <tbody>
                     {% for coachPlanning in coachPlannings %}
                         <tr>
-                            <td>{{ coachPlanning.seance.nom }}</td>
                             <td>{{ coachPlanning.datedebut|date('Y-m-d') }} - {{ coachPlanning.heuredebut|date('H:i:s') }}</td>
                             <td>{{ coachPlanning.datefin|date('Y-m-d') }} - {{ coachPlanning.heurefin|date('H:i:s') }}</td>
                             {% if userRoles == "ROLE_COACH" %}
                                 <td>
-                                    {#<a href="{{ path('app_programme_update', {'id': programme.id }) }}">
+                                    <a href="{{ path('app_coachplanning_update', {'id': coachPlanning.id }) }}">
                                         <i class="fa fa-2x fa-pencil orange-text" aria-hidden="true"></i>
                                     </a>
-                                    <a href="{{ path('app_programme_delete', {'id': programme.id }) }}">
+                                    <a href="{{ path('app_coachplanning_delete', {'id': coachPlanning.id }) }}">
                                         <i class="fa fa-2x fa-times red-text" aria-hidden="true"></i>
-                                    </a>#}
+                                    </a>
                                 </td>
                             {% endif %}
                         </tr>

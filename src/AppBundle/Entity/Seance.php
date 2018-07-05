@@ -125,24 +125,6 @@ class Seance
         $this->description = $description;
     }
 
-    /**
-     * @ORM\OneToMany(targetEntity="CoachPlanning", mappedBy="user")
-     */
-    private $coachPlannings;
-
-    /**
-     * @param mixed $coachPlannings
-     */
-    public function setCoachPlanning($coachPlannings)
-    {
-        $this->coachPlannings = $coachPlannings;
-    }
-
-    public function __construct()
-    {
-        $this->coachPlannings = new ArrayCollection();
-    }
-
     public function __toString() {
         return $this->nom;
     }

@@ -20,9 +20,6 @@ class CoachPlanningType extends AbstractType {
     /** * {@inheritdoc} */
     public function buildForm(FormBuilderInterface $builder, array $options) {
         $builder
-            ->add('seance', EntityType::class, array(
-                'class' => Seance::class,
-            ))
             ->add('datedebut', null, array('label' => "Date de début", 'attr' => array('class' => 'datepicker')))
             ->add('heuredebut', null, array('label' => "Heure de début", 'attr' => array('class' => 'timepicker')))
             ->add('datefin', null, array('required' => false, 'label' => 'Date de fin', 'attr' => array('class' => 'datepicker')))

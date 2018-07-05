@@ -136,27 +136,6 @@ class CoachPlanning
     }
 
     /**
-     * @ORM\ManyToOne(targetEntity="Seance", inversedBy="coachPlannings", cascade={"persist"})
-     * @ORM\JoinColumn(name="seance_id", referencedColumnName="id", nullable=true, onDelete="SET NULL")
-     */
-    private $seance;
-
-    /**
-     * @return mixed
-     */
-    public function getSeance()
-    {
-        return $this->seance;
-    }
-    /**
-     * @param mixed $seance
-     */
-    public function setSeance($seance)
-    {
-        $this->seance = $seance;
-    }
-
-    /**
      * @return mixed
      */
     public function getHeuredebut()

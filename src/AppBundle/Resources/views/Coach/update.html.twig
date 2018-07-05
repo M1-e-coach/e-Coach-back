@@ -1,0 +1,49 @@
+{% extends 'dashbord.html.twig' %}
+
+{% block body %}
+    <style>
+        input:not([type]):focus:not([readonly]), input[type=text]:not(.browser-default):focus:not([readonly]), input[type=password]:not(.browser-default):focus:not([readonly]), input[type=email]:not(.browser-default):focus:not([readonly]), input[type=url]:not(.browser-default):focus:not([readonly]), input[type=time]:not(.browser-default):focus:not([readonly]), input[type=date]:not(.browser-default):focus:not([readonly]), input[type=datetime]:not(.browser-default):focus:not([readonly]), input[type=datetime-local]:not(.browser-default):focus:not([readonly]), input[type=tel]:not(.browser-default):focus:not([readonly]), input[type=number]:not(.browser-default):focus:not([readonly]), input[type=search]:not(.browser-default):focus:not([readonly]), textarea.materialize-textarea:focus:not([readonly]) {
+            border-bottom: 1px solid #5eb0e6!important;
+            -webkit-box-shadow: 0 1px 0 0 #5eb0e6!important;
+            box-shadow: 0 1px 0 0 #5eb0e6!important;
+        }
+    </style>
+    <nav class="blue-grey" style="padding:0 20px!important;height:50px;line-height:50px;opacity:0.5;">
+        <div class="nav-wrapper right-align">
+            <div class="col s12">
+                <a href="{{ path('app_accueil_index') }}" class="breadcrumb" style="font-size:15px;">Accueil</a>
+                <a href="{{ path('app_coachplanning_index') }}" class="breadcrumb" style="font-size:15px;">Planning</a>
+                <a href="{#{{ path('app_programme_update', {'id': programme.id }) }}#}" class="breadcrumb" style="font-size:15px;">Modifier une disponibilité</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <h3 class="center-align">Modifier une disponibilité</h3>
+            {{ form_start(edit_form) }}
+            {{ form_widget(edit_form) }}
+            <button class="mt-3 btn btn-outline-primary customBlue" type="submit">Modifier</button>
+            {{ form_end(edit_form) }}
+        </div>
+    </div>
+
+    <script>
+        {% if userRoles == "ROLE_COACH" %}
+        var iconMenu = document.getElementById('users');
+        iconMenu.style = "display:none;";
+        {% endif %}
+        {% if userRoles == "ROLE_SUPER_ADMIN" %}
+        var iconMenuDispo = document.getElementById('dispos');
+        iconMenuDispo.style = "display:none;";
+        var iconMenuProgs = document.getElementById('progs');
+        iconMenuProgs.style = "display:none;";
+        var iconMenuSeances = document.getElementById('seances');
+        iconMenuSeances.style = "display:none;";
+        {% endif %}
+        $(document).ready(function(){
+            $('select').formSelect();
+            $('.datepicker').datepicker({});
+        });
+    </script>
+{% endblock %}

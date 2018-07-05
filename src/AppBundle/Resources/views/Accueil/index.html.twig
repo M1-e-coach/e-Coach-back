@@ -4,36 +4,6 @@
     {% if userRoles == "ROLE_SUPER_ADMIN" or userRoles == "ROLE_COACH" %}
 
         <!-- card programme -->
-<<<<<<< HEAD
-        {% for prg in lastProgrammes %}
-            <div class="container">
-                <div id="card-container" class="row">
-                    <!-- Col: Card 2 -->
-                    <h3 style="text-align: center;">Nos trois derniers programmes</h3>
-                    {% for prg in lastProgrammes %}
-
-                        <div class="col s12 m6 l4">
-                            <!-- Card 2 -->
-                            <div class="card">
-                                <div class="card-content white-text">
-                                    <span class="card-title grey-text text-darken-4">Programme : {{ prg.nom }}</span>
-
-                                    <p class="card-subtitle grey-text text-darken-2"><b>Numéro de semaine : </b>{{ prg.semaine }}</p>
-                                    <p class="card-subtitle grey-text text-darken-2"><b>Prix en GoldCoin du programme : </b>{{ prg.coin }} GC</p>
-                                    <p class="card-subtitle grey-text text-darken-2"><b>Coach associé : </b>{{ prg.user.username }} </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    {% endfor %}
-                </div>
-            </div>
-        {% endfor %}
-
-        <!-- profile card -->
-=======
->>>>>>> e8e1bc6c2dff189ca5831a41cef4377c2457b319
-
 <div class="container">
         <div id="card-container" class="row">
             <!-- Col: Card 2 -->

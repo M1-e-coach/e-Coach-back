@@ -80,4 +80,49 @@ class CoachPlanningController extends Controller
             'coachs' => $coachs,
         );
     }
+
+    /**
+     * @Route("/update/{id}", requirements={"id"="\d+"})
+     * @Method("GET|POST")
+     * @Template("AppBundle:Programme:update.html.twig")
+     */
+    public function updateAction(CoachPlanning $coachPlanning, Request $request, $id)
+    {
+        $userRoles =  $this->getUser()->getRoles()[0];
+
+        $editForm = $this->createForm(new CoachPlanningType(), $coachPlanning, array(
+            'action' => $this->generateUrl('app_programme_update', array('id' => $coachPlanning->getId())),
+            'method' => 'GET'
+        ));
+
+        if ($editForm->handleRequest($request)->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($coachPlanning);
+            $em->flush();
+
+            return $this->redirect($this->generateUrl('app_coachplanning_index'));
+        }
+
+        return array(
+            'edit_form'   => $editForm->createView(),
+            'userRoles' => $userRoles,
+        );
+    }
+
+    /**
+     * Deletes a Jeu entity.
+     * @Route("/delete/{id}", requirements={"id"="\d+"})
+     * @Method("GET|POST")
+     */
+    public function deleteAction(CoachPlanning $coachPlanning, Request $request, $id)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $coachPlanning = $this->getDoctrine()->getRepository('AppBundle:CoachPlanning')->find($id);
+
+        $em->remove($coachPlanning);
+        $em->flush();
+
+        return $this->redirect($this->generateUrl('app_coachplanning_index'));
+    }
 }
