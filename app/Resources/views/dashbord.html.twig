@@ -46,14 +46,14 @@
 <header>
     <ul id="slide-out" class="sidenav">
         <li>
+            <a class="blue-text" href="{{ path('app_accueil_index') }}">
+                <i class="fa fa-home blue-text" aria-hidden="true"></i>
+                Accueil
+                <i class="material-icons blue-text right">keyboard_arrow_right</i>
+            </a>
             <a id="users" class="blue-text" href="{{ path('app_user_index') }}">
                 <i class="material-icons blue-text">person</i>
                 Utilisateurs
-                <i class="material-icons blue-text right">keyboard_arrow_right</i>
-            </a>
-            <a class="blue-text" href="{{ path('app_programme_index') }}">
-                <i class="fa fa-tasks blue-text" aria-hidden="true"></i>
-                Programmes
                 <i class="material-icons blue-text right">keyboard_arrow_right</i>
             </a>
             <a class="blue-text" href="{{ path('app_jeux_index') }}">
@@ -68,6 +68,11 @@
 =======
                 <i class="fa fa-gamepad blue-text" aria-hidden="true"></i>
                 Jeux
+                <i class="material-icons blue-text right">keyboard_arrow_right</i>
+            </a>
+            <a id="progs" class="blue-text" href="{{ path('app_programme_index') }}">
+                <i class="fa fa-tasks blue-text" aria-hidden="true"></i>
+                Mes programmes
                 <i class="material-icons blue-text right">keyboard_arrow_right</i>
             </a>
             <a id="dispos" class="blue-text" href="{{ path('app_coachplanning_index') }}">

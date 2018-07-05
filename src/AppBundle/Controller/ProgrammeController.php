@@ -38,7 +38,7 @@ class ProgrammeController extends Controller
         $userRoles = $this->getUser()->getRoles()[0];
 
         $em = $this->getDoctrine()->getManager();
-        $programmes = $em->getRepository('AppBundle:Programme')->findAll();
+        $programmes = $em->getRepository('AppBundle:Programme')->findBy(array('user'=>$this->getUser()->getId()));
 
         return array(
             'userRoles' => $userRoles,
