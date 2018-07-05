@@ -20,13 +20,13 @@
                             <p class="card-subtitle grey-text text-darken-2"><b>Prix en GoldCoin du programme : </b>{{ prg.coin }} GC</p>
                             <p class="card-subtitle grey-text text-darken-2"><b>Coach associé : </b>{{ prg.user.username }} </p>
                         </div>
-                        {% if userRoles == "ROLE_SUPER_ADMIN"%}
+
                         <div style="text-align: center" class="button-profil">
                             <a href="{{ path('app_programme_update', {'id': prg.id }) }}">
                                 <button type="button-left" class="btn" style="margin-bottom: 5px;">Modifier</button>
                             </a>
                         </div>
-                        {% endif %}
+
                     </div>
                     <!-- End of card -->
                 </div>
@@ -53,11 +53,13 @@
                             <p class="title" style="margin-bottom: 0px;">Nombre de GoldCoin : {{ lastUser.nbCoin }}</p>
 
                             <p class="description">{{ lastUser.description }}</p>
+                            {% if userRoles == "ROLE_SUPER_ADMIN"%}
                             <div style="text-align: center" class="button-profil">
                                 <a href="{{ path('app_user_update', {'id': lastUser.id }) }}">
                                     <button type="button-left" class="btn" style="margin-bottom: 5px;">Modifier</button>
                                 </a>
                             </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
