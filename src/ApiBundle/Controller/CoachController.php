@@ -1,0 +1,56 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: PC-Guillaume
+ * Date: 05/07/2018
+ * Time: 14:40
+ */
+
+namespace ApiBundle\Controller;
+
+use AppBundle\Entity\User;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
+use FOS\RestBundle\Controller\Annotations as Rest;
+use FOS\RestBundle\View\ViewHandler;
+use FOS\RestBundle\View\View;
+use Nelmio\ApiDocBundle\Annotation as Doc;
+
+class CoachController extends Controller
+{
+    /**
+     * @Rest\View()
+     * @Rest\Get("/coachs/{id}")
+     *
+     * @Doc\ApiDoc(
+     *     section="Users",
+     *     resource=true,
+     *     description="Get one user.",
+     *     requirements={
+     *         {
+     *             "name"="id",
+     *             "dataType"="integer",
+     *             "requirements"="\d+",
+     *             "description"="The article unique identifier."
+     *         }
+     *     }
+     * )
+     */
+    public function getUserAction($id, Request $request)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+        $query = $entityManager->createQuery(
+            'SELECT u FROM AppBundle:User u WHERE u.roles LIKE :role AND u.id = :id'
+        )
+            ->setParameter('role', '%"ROLE_COACH"%')
+            ->setParameter('id', $id)
+        ;
+
+        $coachs = $query->getResult();
+
+
+        return $coachs;
+    }
+}

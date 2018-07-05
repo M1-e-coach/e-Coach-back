@@ -69,8 +69,8 @@ class UserController extends Controller
             );
             $user->setImage($fileName);
 
-
             $user->setEnabled(true);
+            $user->setNote(0);
             $userManager = $this->get('fos_user.user_manager');
             $user->setPlain($user->getPlainPassword());
             $userManager->updateUser($user);
