@@ -26,23 +26,29 @@
             <button class="mt-3 btn btn-outline-primary customBlue" type="submit">Modifier</button>
             {{ form_end(edit_form) }}
         </div>
+    </div>
 
-        <h3>Modifier une seance</h3>
-        <ul class="collapsible">
+    <div class="container">
+        <div id="card-container" class="row">
+            <!-- Col: Card 2 -->
+            <h3 style="text-align: center;">Modifier une seance</h3>
             {% for seance in seances %}
-            <a class="customBlue" href="{{ path('app_programme_updateseance', {'id': seance.id }) }}">
-                <li>
-                    <div class="collapsible-header">
-                        <i class="fa fa-2x fa-thumb-tack" aria-hidden="true"></i>
-                        <div class="row">
-                            <p class="col s3">{{ seance.nom }}</p>
-                            <p class="col s3">{{ seance.description }}</p>
+
+                <div class="col s12 m6 l4">
+                    <!-- Card 2 -->
+                    <a class="customBlue" href="{{ path('app_programme_updateseance', {'id': seance.id }) }}">
+                    <div class="card">
+                        <div class="card-content white-text">
+                            <span class="card-title grey-text text-darken-4">Programme : {{ seance.nom }}</span>
+                            <p class="card-subtitle grey-text text-darken-2"><b>Description de la séance : </b>{{ seance.description }}</p>
                         </div>
                     </div>
-                </li>
-            </a>
+                    </a>
+                    <!-- End of card -->
+                </div>
+
             {% endfor %}
-        </ul>
+        </div>
     </div>
 
     <script>
