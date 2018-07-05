@@ -5,37 +5,29 @@
 
         <!-- card programme -->
 <div class="container">
-        <div id="card-container" class="row">
-            <!-- Col: Card 2 -->
-            <h3 style="text-align: center;">Nos trois derniers programmes</h3>
-            {% for prg in lastProgrammes %}
+    <div id="card-container" class="row">
+        <!-- Col: Card 2 -->
+        <h3 style="text-align: center;">Nos trois derniers programmes</h3>
+        {% for prg in lastProgrammes %}
+            <div class="col s12 m6 l4">
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-content white-text">
+                        <span class="card-title grey-text text-darken-4">Programme : {{ prg.nom }}</span>
 
-                <div class="col s12 m6 l4">
-                    <!-- Card 2 -->
-                    <div class="card">
-                        <div class="card-content white-text">
-                            <span class="card-title grey-text text-darken-4">Programme : {{ prg.nom }}</span>
-
-                            <p class="card-subtitle grey-text text-darken-2"><b>Numéro de semaine : </b>{{ prg.semaine }}</p>
-                            <p class="card-subtitle grey-text text-darken-2"><b>Prix en GoldCoin du programme : </b>{{ prg.coin }} GC</p>
-                            <p class="card-subtitle grey-text text-darken-2"><b>Coach associé : </b>{{ prg.user.username }} </p>
-                        </div>
-
-                        <div style="text-align: center" class="button-profil">
-                            <a href="{{ path('app_programme_update', {'id': prg.id }) }}">
-                                <button type="button-left" class="btn" style="margin-bottom: 5px;">Modifier</button>
-                            </a>
-                        </div>
-
+                        <p class="card-subtitle grey-text text-darken-2"><b>Numéro de semaine : </b>{{ prg.semaine }}</p>
+                        <p class="card-subtitle grey-text text-darken-2"><b>Prix en GoldCoin du programme : </b>{{ prg.coin }} GC</p>
+                        <p class="card-subtitle grey-text text-darken-2"><b>Coach associé : </b>{{ prg.user.username }} </p>
                     </div>
-                    <!-- End of card -->
                 </div>
-
-            {% endfor %}
-        </div>
+                <!-- End of card -->
+            </div>
+        {% endfor %}
+    </div>
 </div>
-        <!-- profile card -->
 
+
+        <!-- profile card -->
 <div class="container">
     <div id="card-container" class="row">
         <h3 style="text-align: center;">Nos trois derniers profils</h3>
@@ -68,6 +60,7 @@
     </div>
 </div>
     {% endif %}
+
     <script>
         {% if userRoles == "ROLE_COACH" %}
         var iconMenu = document.getElementById('users');
