@@ -46,6 +46,9 @@
                         <input id="password" type="password" name="_password" class="validate" required>
                         <label for="password">{{ 'security.login.password'|trans({}, 'FOSUserBundle') }}</label>
                     </div>
+                    <div class="input-field col s12 right-align">
+                        <a href="{{ path('register') }}">Créer un compte</a>
+                    </div>
                     <div class="input-field col s12 center-align">
                         <button class="btn waves-effect waves-light customBlue" name="_submit" type="submit" >Connexion
                             <i class="material-icons right">send</i>
