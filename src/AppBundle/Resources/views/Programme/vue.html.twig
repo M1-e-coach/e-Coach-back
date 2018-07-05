@@ -17,40 +17,6 @@
             </div>
         </div>
     </nav>
-
-<<<<<<< HEAD
-    <div class="container">
-        <div class="row">
-            <h3 class="center-align">Visualisation d'un programme</h3>
-            {% for prg in programme %}
-                    {#{{ dump(prg) }}#}
-                <div class="col s12">
-                    <p><b>Nom du programme : </b>{{ prg.nom }}</p>
-                    <p><b>Description programme : </b>{{ prg.description }}</p>
-                    <p><b>Numéro de semaine : </b>{{ prg.semaine }}</p>
-                    <p><b>Prix en GoldCoin du programme : </b>{{ prg.coin }} GC</p>
-                    <p><b>Coach associé : </b>{{ prg.user.username }} </p>
-                </div>
-                <div class="col s12">
-                    <h4>Seances associés à ce programme : </h4>
-                    {% for seance in seances %}
-                        {% if seance.programme.id == prg.id %}
-                            <div class="col s4">
-                                <p><b>Nom de la seance : </b>{{ seance.nom }}</p>
-                                <p><b>Description de la seance : </b>{{ seance.description }}</p>
-                            </div>
-                        {% endif %}
-                    {% endfor %}
-                </div>
-
-            {% endfor %}
-
-        </div>
-    </div>
-
-
-=======
->>>>>>> bb7ce5c3b847efd8098a35086edd82cae3a19bc8
 {% for prg in programme %}
     <div class="container">
         <h3 class="center-align">Programme {{ prg.nom }}</h3>
@@ -69,13 +35,13 @@
                     <!-- Card 2 -->
                     <div class="card">
                         <div class="card-content white-text">
-                            <div class="card__date" style="margin-right: 50px;">
+                            {#<div class="card__date" style="margin-right: 50px;">
                                 <p class="card__date__day" style="color: #fff;text-align: center; font-weight: bold;">{{ seance.date|date("d/m") }}</p>
-                            </div>
+                            </div>#}
 
-                            <div class="card__date" style="background:red;">
+                            {#<div class="card__date" style="background:red;">
                                 <p class="card__date__day" style="color: #fff;text-align: center; font-weight: bold;line-height: 18px;">{{ seance.datetimedebut|date("h:i") }} - {{ seance.datetimefin|date("h:i") }}</p>
-                            </div>
+                            </div>#}
                             <span class="card-title grey-text text-darken-4">{{ seance.nom }}</span>
 
                             <p class="card-subtitle grey-text text-darken-2"><b>Description programme : </b>{{ seance.description }}</p>

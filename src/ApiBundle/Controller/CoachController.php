@@ -47,10 +47,28 @@ class CoachController extends Controller
             ->setParameter('role', '%"ROLE_COACH"%')
             ->setParameter('id', $id)
         ;
-
         $coachs = $query->getResult();
 
+        $queryProgrammes = $entityManager->createQuery(
+            'SELECT p, s FROM AppBundle:Seance s, AppBundle:User u, AppBundle:Programme p WHERE u.id = :id AND p.user = :id AND s.user = :id AND u.roles LIKE :role'
+        )
+            ->setParameter('role', '%"ROLE_COACH"%')
+            ->setParameter('id', $id)
+        ;
+        $coachProgrammes = $queryProgrammes->getResult();
 
-        return $coachs;
+        $querySeanceSolo = $entityManager->createQuery(
+            'SELECT ss FROM AppBundle:SeanceSolo ss, AppBundle:User u WHERE u.id = :id AND ss.user = :id AND u.roles LIKE :role'
+        )
+            ->setParameter('role', '%"ROLE_COACH"%')
+            ->setParameter('id', $id)
+        ;
+        $coachsSeanceSolos = $querySeanceSolo->getResult();
+
+        return array(
+            'coachInfos' => $coachs,
+            'coachProgrammes' => $coachProgrammes,
+            'coachSeanceSolos' => $coachsSeanceSolos
+        );
     }
 }
