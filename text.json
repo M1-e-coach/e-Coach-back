@@ -1,0 +1,163 @@
+{
+  "coachInfos": [
+    {
+      "nbCoin": 0,
+      "image": "",
+      "plain": "0",
+      "couthoraire": 0,
+      "description": "",
+      "note": 0,
+      "jeu": null,
+      "age": 0,
+      "divers": "",
+      "pays": "",
+      "langue": "",
+      "id": 17,
+      "username": "coach",
+      "usernameCanonical": "coach",
+      "salt": "njg7916wjb44g848gwcwwkkgs8soggw",
+      "email": "coach@mail.fr",
+      "emailCanonical": "coach@mail.fr",
+      "password": "$2y$13$njg7916wjb44g848gwcwweTNQCTtcaq8fm/3zr6kLrpAE387vUth2",
+      "plainPassword": null,
+      "lastLogin": {
+        "timezone": {
+          "name": "UTC",
+          "transitions": [
+            {
+              "ts": -9223372036854775808,
+              "time": "-292277022657-01-27T08:29:52+0000",
+              "offset": 0,
+              "isdst": false,
+              "abbr": "UTC"
+            }
+          ],
+          "location": {
+            "country_code": "??",
+            "latitude": 0,
+            "longitude": 0,
+            "comments": ""
+          }
+        },
+        "offset": 0,
+        "timestamp": 1530824712
+      },
+      "confirmationToken": null,
+      "roles": [
+        "ROLE_COACH",
+        "ROLE_USER"
+      ],
+      "accountNonExpired": true,
+      "accountNonLocked": true,
+      "credentialsNonExpired": true,
+      "credentialsExpired": false,
+      "enabled": true,
+      "expired": false,
+      "locked": false,
+      "superAdmin": false,
+      "user": false,
+      "passwordRequestedAt": null,
+      "groups": [],
+      "groupNames": []
+    }
+  ],
+  "coachProgrammes": [
+    {
+      "seanceId": 31,
+      "seanceNom": "aa",
+      "seanceDescription": "azer",
+      "programmeId": 22,
+      "programmeNom": "Test",
+      "programmeDescription": "test",
+      "prgrammeCoin": 100,
+      "programmeSemaine": 1
+    },
+    {
+      "seanceId": 32,
+      "seanceNom": "bb",
+      "seanceDescription": "azefqsdfqsdf",
+      "programmeId": 22,
+      "programmeNom": "Test",
+      "programmeDescription": "test",
+      "prgrammeCoin": 100,
+      "programmeSemaine": 1
+    },
+    {
+      "seanceId": 33,
+      "seanceNom": "p2",
+      "seanceDescription": "seance p2",
+      "programmeId": 23,
+      "programmeNom": "Test1",
+      "programmeDescription": "test2",
+      "prgrammeCoin": 1000,
+      "programmeSemaine": 2
+    }
+  ],
+  "coachSeanceSolos": [
+    {
+      "user": {
+        "nbCoin": 0,
+        "image": "",
+        "plain": "0",
+        "couthoraire": 0,
+        "description": "",
+        "note": 0,
+        "jeu": null,
+        "age": 0,
+        "divers": "",
+        "pays": "",
+        "langue": "",
+        "id": 17,
+        "username": "coach",
+        "usernameCanonical": "coach",
+        "salt": "njg7916wjb44g848gwcwwkkgs8soggw",
+        "email": "coach@mail.fr",
+        "emailCanonical": "coach@mail.fr",
+        "password": "$2y$13$njg7916wjb44g848gwcwweTNQCTtcaq8fm/3zr6kLrpAE387vUth2",
+        "plainPassword": null,
+        "lastLogin": {
+          "timezone": {
+            "name": "UTC",
+            "transitions": [
+              {
+                "ts": -9223372036854775808,
+                "time": "-292277022657-01-27T08:29:52+0000",
+                "offset": 0,
+                "isdst": false,
+                "abbr": "UTC"
+              }
+            ],
+            "location": {
+              "country_code": "??",
+              "latitude": 0,
+              "longitude": 0,
+              "comments": ""
+            }
+          },
+          "offset": 0,
+          "timestamp": 1530824712
+        },
+        "confirmationToken": null,
+        "roles": [
+          "ROLE_COACH",
+          "ROLE_USER"
+        ],
+        "accountNonExpired": true,
+        "accountNonLocked": true,
+        "credentialsNonExpired": true,
+        "credentialsExpired": false,
+        "enabled": true,
+        "expired": false,
+        "locked": false,
+        "superAdmin": false,
+        "user": false,
+        "passwordRequestedAt": null,
+        "groups": [],
+        "groupNames": []
+      },
+      "id": 3,
+      "nom": "azer",
+      "description": "azer"
+    }
+  ]
+}

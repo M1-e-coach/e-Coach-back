@@ -272,64 +272,36 @@ class UserController extends Controller
 
     /**
      * @Rest\View()
-     * @Rest\Post("/users/stats/{id}")
-     *
-     *
+     * @Rest\Put("/coin/{id}")
      * @Doc\ApiDoc(
-     *     section="Register",
+     *     section="Users",
      *     resource=true,
-     *     description="Get the list of all coachs."
+     *     description="update user.",
+     *      requirements={
+     *         {
+     *             "name"="id",
+     *             "dataType"="integer",
+     *             "requirements"="\d+",
+     *             "description"="The article unique identifier."
+     *         }
+     *     }
+     *
      * )
      */
-    public function postUserStatAction($id, Request $request)
+    public function putCoinAction($id, Request $request)
     {
-        $em = $this->getDoctrine()->getManager();
-
-        $stat = new Stat();
         $content = $this->get('request')->getContent();
         if(!empty($content)){
             $params = json_decode($content, true);
         }
-
-        $stat->setUserId($params["id"]);
-        $stat->setPrecision($params["precision"]);
-        $stat->setCommunication($params["communication"]);
-        $stat->setReflexe($params["reflexe"]);
-        $stat->setMindgame($params["mindgame"]);
-        $stat->setDeplacement($params["deplacement"]);
-
-        $em->persist($stat);
-        $em->flush();
-
-        return new Response("", 201);
-    }
-
-    /**
-     * @Rest\View()
-     * @Rest\Post("/user/stat")
-     * @Doc\ApiDoc(
-     *     section="Stat",
-     *     resource=true,
-     *     description="update user."
-     *
-     * )
-     */
-    public function putStatAction(Request $request)
-    {
         $em = $this->getDoctrine()->getManager();
+        $user = $em->getRepository('AppBundle:User')->find($id);
 
-        $stat = new Stat();
-        $content = $this->get('request')->getContent();
-        if(!empty($content)){
-            $params = json_decode($content, true);
-        }
+        $user->setNbCoin($params["amount"]);
 
-        $stat->setId(1);
-        $stat->setPrecision(1);
-
-        $em->persist($stat);
+        $em->persist($user);
         $em->flush();
 
-        return $stat;
+        return $user;
     }
 }

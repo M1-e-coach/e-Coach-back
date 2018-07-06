@@ -4,6 +4,8 @@
 namespace ApiBundle\Controller;
 
 
+use AppBundle\Entity\Commande;
+use AppBundle\Entity\Stat;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
@@ -11,123 +13,76 @@ use Symfony\Component\HttpFoundation\Response;
 use FOS\RestBundle\Controller\Annotations as Rest; // alias pour toutes les annotations
 use FOS\RestBundle\View\ViewHandler;
 use FOS\RestBundle\View\View; // Utilisation de la vue de FOSRestBundle
-use AppBundle\Entity\Reservation;
 use Nelmio\ApiDocBundle\Annotation as Doc;
 
 
 class ReservationController extends Controller
 {
+    /**
+     * @Rest\View()
+     * @Rest\Put("/commande")
+     * @Doc\ApiDoc(
+     *     section="Users",
+     *     resource=true,
+     *     description="update user."
+     *
+     * )
+     */
+    public function putUsersInfoAction(Request $request)
+    {
+        $content = $this->get('request')->getContent();
+        if(!empty($content)){
+            $params = json_decode($content, true);
+        }
+        $em = $this->getDoctrine()->getManager();
+        $commande = New Commande();
+
+        $commande->setUserid($params["userId"]);
+        $commande->setEventid($params["eventId"]);
+        $commande->setProgrammeid($params["programmeId"]);
+        $commande->setStatid($params["statId"]);
+
+        $em->persist($commande);
+        $em->flush();
+
+        return $commande;
+    }
 
     /**
      * @Rest\View()
-     * @Rest\Get("/reservations")
-     *
-     *
+     * @Rest\Put("/stat/{id}")
      * @Doc\ApiDoc(
-     *     section="Reservations",
+     *     section="Stats",
      *     resource=true,
-     *     description="Get the list of all reservations."
-     * )
-     */
-    public function getReservationsAction(Request $request)
-    {
-        $reservations = $this->get('doctrine.orm.entity_manager')
-            ->getRepository('AppBundle:Reservation')
-            ->findAll();
-        /* @var $reservations Reservation[] */
-
-        return $reservations;
-    }
-
-    /**
-     * @Rest\View()
-     * @Rest\Get("/reservations/{id}")
-     *
-     * @Doc\ApiDoc(
-     *     section="Reservations",
-     *     resource=true,
-     *     description="Get one reservations.",
-     *     requirements={
-     *         {
-     *             "name"="id",
-     *             "dataType"="integer",
-     *             "requirements"="\d+",
-     *             "description"="The article unique identifier."
-     *         }
-     *     }
-     * )
-     */
-
-    public function getReservationAction($id,Request $request)
-    {
-
-        $reservation=$this->get('doctrine.orm.entity_manager')
-            ->getRepository('AppBundle:Reservation')
-            ->find($id);
-
-
-        if (empty($reservation)) {
-            return new JsonResponse(array('message' => 'reservation not found'), Response::HTTP_NOT_FOUND);
-        }
-
-        return $reservation;
-    }
-    /**
-     * @Rest\View(statusCode=Response::HTTP_CREATED)
-     * @Rest\Post("/reservations")
-     * @Doc\ApiDoc(
-     *     section="Reservations",
-     *     resource=true,
-     *     description="Post reservations.",
-     *     statusCodes={
-     *         201="Returned when created",
-     *         400="Returned when a violation is raised by validation"
-     *     }
+     *     description="update stat."
      *
      * )
      */
-    public function postReservationsAction(Request $request)
+    public function putStatAction($id, Request $request)
     {
-        $reservation = new Reservation();
-        $form = $this->createForm('AppBundle\Form\Type\ReservationType',$reservation);
-        $form->submit($request->request->all());
-
-        if ($form -> isValid()){
-            $em=$this->get('doctrine.orm.entity_manager');
-            $em->persist($reservation);
-            $em->flush();
-            return $reservation;
-        }else{
-            return $form;
+        $content = $this->get('request')->getContent();
+        if(!empty($content)){
+            $paramsS = json_decode($content, true);
         }
+        $em = $this->getDoctrine()->getManager();
+        //$stat = New Stat();
+
+        /*$stat->setPrecision($paramsS["precision"]);
+        $stat->setMindgame($paramsS["mindgame"]);
+        $stat->setDeplacement($paramsS["deplacement"]);
+        $stat->setCommunication($paramsS["communication"]);
+        $stat->setReflexe($paramsS["reflexe"]);*/
+
+        $entityManager = $this->getDoctrine()->getManager();
+        $sql = 'INSERT INTO `stat`(`precision`, `mindgame`, `deplacement`, `communication`, `reflexe`, `userid`) 
+        VALUES ('.$paramsS["precision"].', '.$paramsS["mindgame"].', '.$paramsS["deplacement"].', 
+        '.$paramsS["communication"].', '.$paramsS["reflexe"].', '.$id.')';
+        $stmt = $em->getConnection()->prepare($sql);
+        $stat = $stmt->execute();
+
+        /*$em->persist($request);
+        $em->flush();*/
+
+        return $stat;
     }
-    /**
-     * @Rest\View(statusCode=Response::HTTP_NO_CONTENT)
-     * @Rest\Delete("/reservations/{id}")
-     *  @Doc\ApiDoc(
-     *     section="Reservations",
-     *     resource=true,
-     *     description="remove reservation.",
-     *     statusCodes={
-     *         201="Returned when created",
-     *         400="Returned when a violation is raised by validation"
-     *     }
-     *
-     * )
-     */
-    public function removeReservationsAction(Request $request)
-    {
-        $em = $this->get('doctrine.orm.entity_manager');
-        $reservation = $em->getRepository('AppBundle:Reservation')
-            ->find($request->get('id'));
-        /* @var $reservation Reservation */
-
-        if ($reservation) {
-            $em->remove($reservation);
-            $em->flush();
-        }
-
-    }
-
-
 }

@@ -31,6 +31,26 @@ class Stat
     protected $precision;
 
     /**
+     * @ORM\Column(type="integer")
+     */
+    protected $mindgame;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $deplacement;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $communication;
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $reflexe;
+
+    /**
      * @return mixed
      */
     public function getId()
@@ -60,5 +80,90 @@ class Stat
     public function setPrecision($precision)
     {
         $this->precision = $precision;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMindgame()
+    {
+        return $this->mindgame;
+    }
+
+    /**
+     * @param mixed $mindgame
+     */
+    public function setMindgame($mindgame)
+    {
+        $this->mindgame = $mindgame;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDeplacement()
+    {
+        return $this->deplacement;
+    }
+
+    /**
+     * @param mixed $deplacement
+     */
+    public function setDeplacement($deplacement)
+    {
+        $this->deplacement = $deplacement;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCommunication()
+    {
+        return $this->communication;
+    }
+
+    /**
+     * @param mixed $communication
+     */
+    public function setCommunication($communication)
+    {
+        $this->communication = $communication;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getReflexe()
+    {
+        return $this->reflexe;
+    }
+
+    /**
+     * @param mixed $reflexe
+     */
+    public function setReflexe($reflexe)
+    {
+        $this->reflexe = $reflexe;
+    }
+
+    /**
+     * @ORM\Column(type="integer")
+     */
+    protected $userid;
+
+    /**
+     * @return mixed
+     */
+    public function getUserid()
+    {
+        return $this->userid;
+    }
+
+    /**
+     * @param mixed $userid
+     */
+    public function setUserid($userid)
+    {
+        $this->userid = $userid;
     }
 }
