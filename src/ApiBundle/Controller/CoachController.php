@@ -50,7 +50,8 @@ class CoachController extends Controller
         $coachs = $query->getResult();
 
         $queryProgrammes = $entityManager->createQuery(
-            'SELECT p, s FROM AppBundle:Seance s, AppBundle:User u, AppBundle:Programme p WHERE u.id = :id AND p.user = :id AND s.user = :id AND u.roles LIKE :role'
+            //'SELECT p, s FROM AppBundle:Seance s, AppBundle:User u, AppBundle:Programme p WHERE u.id = :id AND p.user = :id AND s.user = :id AND u.roles LIKE :role'
+            'SELECT s.id as seanceId, s.nom as seanceNom, s.description as seanceDescription, p.id as programmeId, p.nom as programmeNom, p.description as programmeDescription, p.coin as prgrammeCoin, p.semaine as programmeSemaine FROM AppBundle:Seance s, AppBundle:User u, AppBundle:Programme p WHERE u.id = :id AND p.user = :id AND s.programme = p.id AND u.roles LIKE :role'
         )
             ->setParameter('role', '%"ROLE_COACH"%')
             ->setParameter('id', $id)

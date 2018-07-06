@@ -303,4 +303,33 @@ class UserController extends Controller
 
         return new Response("", 201);
     }
+
+    /**
+     * @Rest\View()
+     * @Rest\Post("/user/stat")
+     * @Doc\ApiDoc(
+     *     section="Stat",
+     *     resource=true,
+     *     description="update user."
+     *
+     * )
+     */
+    public function putStatAction(Request $request)
+    {
+        $em = $this->getDoctrine()->getManager();
+
+        $stat = new Stat();
+        $content = $this->get('request')->getContent();
+        if(!empty($content)){
+            $params = json_decode($content, true);
+        }
+
+        $stat->setId(1);
+        $stat->setPrecision(1);
+
+        $em->persist($stat);
+        $em->flush();
+
+        return $stat;
+    }
 }
