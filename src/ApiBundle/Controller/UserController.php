@@ -194,7 +194,7 @@ class UserController extends Controller
 
     /**
      * @Rest\View()
-     * @Rest\Post("/register")
+     * @Rest\Put("/register")
      *
      *
      * @Doc\ApiDoc(
@@ -222,6 +222,16 @@ class UserController extends Controller
                 $user->setEmail($params["email"]);
                 $user->setPlainPassword($params["password"]);
                 $user->setPlain($params["password"]);
+
+                $user->setDivers("");
+                $user->setLangue("");
+                $user->setPays("");
+                $user->setDescription("");
+                $user->setCouthoraire(0);
+                $user->setEnabled(true);
+                $user->setNote(0);
+                $user->setAge(0);
+
                 $em->persist($user);
                 $em->flush();
             }
