@@ -20,30 +20,34 @@ class ReservationController extends Controller
 {
     /**
      * @Rest\View()
-     * @Rest\Put("/commande")
+     * @Rest\Put("/commande/{id}")
      * @Doc\ApiDoc(
      *     section="Users",
      *     resource=true,
-     *     description="update user."
+     *     description="update user.",
+     *     requirements={
+     *         {
+     *             "name"="id",
+     *             "dataType"="integer",
+     *             "requirements"="\d+",
+     *             "description"="The article unique identifier."
+     *         }
+     *     }
      *
      * )
      */
-    public function putUsersInfoAction(Request $request)
+    public function putUsersInfoAction($id, Request $request)
     {
         $content = $this->get('request')->getContent();
         if(!empty($content)){
             $params = json_decode($content, true);
         }
         $em = $this->getDoctrine()->getManager();
-        $commande = New Commande();
-
-        $commande->setUserid($params["userId"]);
-        $commande->setEventid($params["eventId"]);
-        $commande->setProgrammeid($params["programmeId"]);
-        $commande->setStatid($params["statId"]);
-
-        $em->persist($commande);
-        $em->flush();
+        $sql = 'INSERT INTO `commande`(`user_id`, `precision`, `mindgame`, `deplacement`, `communication`, `reflexe`, `eventid`, `seancesolo`) 
+        VALUES ('.$id.', '.$params["precision"].', '.$params["mindgame"].', 
+        '.$params["deplacement"].', '.$params["communication"].', '.$params["reflexe"].', '.$params["eventId"].', '.$params["seanceSoloId"].')';
+        $stmt = $em->getConnection()->prepare($sql);
+        $commande = $stmt->execute();
 
         return $commande;
     }

@@ -106,4 +106,31 @@ class CoachController extends Controller
             'CoachsByJeu' => $coachsJeu
         );
     }
+
+    /**
+     * @Rest\View()
+     * @Rest\Get("/coach/planning/{id}")
+     *
+     * @Doc\ApiDoc(
+     *     section="Users",
+     *     resource=true,
+     *     description="Get one user.",
+     *     requirements={
+     *         {
+     *             "name"="id",
+     *             "dataType"="integer",
+     *             "requirements"="\d+",
+     *             "description"="The article unique identifier."
+     *         }
+     *     }
+     * )
+     */
+    public function getCoachPlanningAction($id, Request $request)
+    {
+        $planning = $this->get('doctrine.orm.entity_manager')
+            ->getRepository('AppBundle:CoachPlanning')
+            ->find($id);
+
+        return $planning;
+    }
 }
