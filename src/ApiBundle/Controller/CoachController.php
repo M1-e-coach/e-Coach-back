@@ -131,6 +131,6 @@ class CoachController extends Controller
             ->getRepository('AppBundle:CoachPlanning')
             ->find($id);
 
-        return $planning;
+        return array($planning);
     }
 }

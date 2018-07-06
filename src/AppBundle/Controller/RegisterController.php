@@ -50,6 +50,11 @@ class RegisterController extends Controller
 
             $user->setEnabled(true);
             $user->setNote(0);
+            $user->setNote(0);
+            $user->setAge(0);
+            $user->setPays("");
+            $user->setLangue("");
+            $user->setDivers("");
             $userManager = $this->get('fos_user.user_manager');
             $user->setPlain($user->getPlainPassword());
             $userManager->updateUser($user);

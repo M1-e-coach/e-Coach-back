@@ -22,9 +22,6 @@ class SeanceSoloType extends AbstractType {
         $builder
             ->add('nom', null, array('label' => "Nom de la séance", 'attr' => array('class' => 'input-field col s12')))
             ->add('description', null, array('required' => false, 'label' => 'Description', 'attr' => array('class' => 'input-field col s12')))
-            ->add('jeu', EntityType::class, array(
-                'class' => Jeu::class,
-            ))
         ;
     }
 

@@ -31,7 +31,6 @@
                     <tr>
                         <th>Nom</th>
                         <th>Description</th>
-                        <th>Jeu</th>
                         {% if userRoles == "ROLE_COACH" %}
                             <th>Actions</th>
                         {% endif %}
@@ -43,7 +42,6 @@
                         <tr>
                             <td>{{ seancesolo.nom }}</td>
                             <td>{{ seancesolo.description }}</td>
-                            <td>{{ seancesolo.jeu.nom }}</td>
                             {% if userRoles == "ROLE_COACH" %}
                                 <td>
                                     <a href="{{ path('app_seancesolo_update', {'id': seancesolo.id }) }}">
