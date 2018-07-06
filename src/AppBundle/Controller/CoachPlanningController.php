@@ -66,6 +66,10 @@ class CoachPlanningController extends Controller
         $form = $this->createForm(new CoachPlanningType(), $coach);
         if ($form->handleRequest($request)->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $coach->setDatedebut(date("Y-m-d"));
+            $coach->setDatefin(date("Y-m-d"));
+            $coach->setHeuredebut(date("H:i:s"));
+            $coach->setHeurefin(date("H:i:s"));
             $coach->setUser($this->getUser());
             $coach->setIsActif(true);
             $em->persist($coach);

@@ -127,10 +127,18 @@ class CoachController extends Controller
      */
     public function getCoachPlanningAction($id, Request $request)
     {
-        $planning = $this->get('doctrine.orm.entity_manager')
+        /*$planning = $this->get('doctrine.orm.entity_manager')
             ->getRepository('AppBundle:CoachPlanning')
-            ->find($id);
+            ->findby(array('coachId'=>$id));*/
 
-        return array($planning);
+        $entityManager = $this->getDoctrine()->getManager();
+        $query = $entityManager->createQuery(
+            'SELECT p FROM AppBundle:CoachPlanning p WHERE p.user = :id'
+        )
+            ->setParameter('id', $id)
+        ;
+        $planning = $query->getResult();
+
+        return $planning;
     }
 }
